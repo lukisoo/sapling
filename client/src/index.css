@@ -149,3 +149,21 @@ body {
 #leaderboard-detail h3 {
   font-size: 15px;
 }
+
+#friends-text {
+  width: 500px;
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: 0px;
+  color: #2A6025;
+}
+
+#friends {
+  border: 0px solid red; /* Example border styling */
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 550px;
+
+}
