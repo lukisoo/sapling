@@ -5,6 +5,7 @@ import GardenPage from "./pages/GardenPage";
 import LeaderboardPage from './pages/LeaderboardPage';
 import ProfilePage from './pages/ProfilePage';
 import Navbar from './components/Navbar';
+import FriendsPage from './pages/FriendsPage';
 
 function App() {
   const appStyle = {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/garden" element={<GardenPage />}/>
           <Route path="/profile" element={<ProfilePage />}/>
           <Route path="/leaderboard" element={<LeaderboardPage />}/>
+          <Route path="/friends" element={<FriendsPage />}/>
       </Routes>
     </div>
   )
