@@ -4,38 +4,39 @@
 }
 
 .left {
-  background-color: pink;
+  /* background-color: pink; */
   height: 88vh;
   padding: 25px 35px 25px 35px;
 }
 
 .right {
-  background-color: lightcoral;
+  /* background-color: lightcoral; */
   text-align: center;
 }
 
 /* div Bgs */
 
 .store-bg {
-  height: 800px;
+  height: 500px;
   width: 90%;
-  background-color: red;
+  /* background-color: red; */
   background-color: #2A6025;
   border-radius: 20px;
   padding: 3% 5% 3% 5%;
+  margin-top: 3%;
 
 }
 
 .info-bg {
   height: 80px;
   width: 81.75%;
-  margin: 5px 90px 50px 90px;
   background-color: #2A6025;
   border-radius: 20px;
 }
 
 /* Shop */
-.shop-listings {
+.shop-heading {
+  color: white;
 
 }
 
@@ -82,7 +83,7 @@
 .island-container {
   background-image: url("../assets/island.png");
   background-size: 100%;
-  background-color: red;
+  /* background-color: red; */
   height: 445px;
   width: auto;
   margin: 60px 90px 20px 90px;
@@ -104,13 +105,13 @@
   display: grid;
   grid-template-columns: repeat(12, 60px);
   grid-auto-rows: 60px;
-  background-color: yellow;
+  /* background-color: yellow;
   opacity: 50%;
-  border: solid black 3px;
+  border: solid black 3px; */
 }
 
 .grid-box {
-  border: solid black 2px;
+  /* border: solid black 2px; */
 }
 
 .grid-icon {
@@ -118,6 +119,13 @@
 }
 
 .valid {
-  background-color: green;
+  /* background-color: green; */
+  border-radius: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
 }
 
+.valid:hover {
+  background-color: green;
+  opacity: 0.5;
+}

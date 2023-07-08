@@ -74,6 +74,9 @@ export default function GardenPage() {
 
     //Check if no plant selected (do nothing)
     if (currentPlant == "") {
+      setCurrentStatusMessage(
+        "Please buy a plant first before you can place it!"
+      );
     } else {
       //TODO: CHECK IF PLANT ALREADY EXISTS IN SAID POSITION
 
@@ -91,7 +94,7 @@ export default function GardenPage() {
       // console.log("firsthalf");
       // console.log(firstHalf);
       const secondHalf = firstHalf.concat(
-        currentIslandDisplay.slice(index + 1, 23)
+        currentIslandDisplay.slice(index + 1, 25)
       );
       // console.log("secondhalf)");
       // console.log(secondHalf);
@@ -114,10 +117,8 @@ export default function GardenPage() {
           <NavLink exact to="/" activeClassName="active">
             <img className="roadmap-button" src={RoadmapButton} />
           </NavLink>
-          <img className="roadmap-button" src={RoadmapButton} />
-
-          <h1>{currentIslandDisplay[0]}</h1>
-          <h1>{currentPlant}</h1>
+          {/* <h1>{currentIslandDisplay[0]}</h1>
+          <h1>{currentPlant}</h1> */}
 
           <div className="store-bg">
             <div className="shop-heading">
@@ -366,11 +367,8 @@ export default function GardenPage() {
                 <div id="1" className="grid-box placeholder"></div>
                 <div id="1" className="grid-box placeholder"></div>
                 <div id="1" className="grid-box placeholder"></div>
-                <div id="1" className="grid-box placeholder"></div>
-                <div id="1" className="grid-box placeholder"></div>
-
                 <div
-                  id="1"
+                  id="20"
                   onClick={() => {
                     handleIslandUpdate(20);
                   }}
@@ -379,7 +377,7 @@ export default function GardenPage() {
                   <img className="grid-icon" src={currentIslandDisplay[20]} />
                 </div>
                 <div
-                  id="1"
+                  id="21"
                   onClick={() => {
                     handleIslandUpdate(21);
                   }}
@@ -387,8 +385,9 @@ export default function GardenPage() {
                 >
                   <img className="grid-icon" src={currentIslandDisplay[21]} />
                 </div>
+
                 <div
-                  id="1"
+                  id="22"
                   onClick={() => {
                     handleIslandUpdate(22);
                   }}
@@ -397,13 +396,31 @@ export default function GardenPage() {
                   <img className="grid-icon" src={currentIslandDisplay[22]} />
                 </div>
                 <div
-                  id="1"
+                  id="23"
                   onClick={() => {
                     handleIslandUpdate(23);
                   }}
                   className="grid-box valid"
                 >
                   <img className="grid-icon" src={currentIslandDisplay[23]} />
+                </div>
+                <div
+                  id="24"
+                  onClick={() => {
+                    handleIslandUpdate(24);
+                  }}
+                  className="grid-box valid"
+                >
+                  <img className="grid-icon" src={currentIslandDisplay[24]} />
+                </div>
+                <div
+                  id="25"
+                  onClick={() => {
+                    handleIslandUpdate(25);
+                  }}
+                  className="grid-box valid"
+                >
+                  <img className="grid-icon" src={currentIslandDisplay[25]} />
                 </div>
 
                 <div id="1" className="grid-box placeholder"></div>
