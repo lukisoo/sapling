@@ -54,11 +54,18 @@ export default function GardenPage() {
 
   const [currentPlant, setCurrentPlant] = useState("");
 
+  const [currentStatusMessage, setCurrentStatusMessage] = useState(
+    "Your garden is looking incredibly bare..."
+  );
+
+  const [shopEnabled, setShopEnabled] = useState(true);
+
   const handlePurchase = (selectedPlant) => {
     //TODO CHECK MONEY IF POSSIBLE
     // Enable click to add
 
     // Plant successfully selected -> need to add to island
+    setShopEnabled(false);
     setCurrentPlant(selectedPlant);
   };
 
@@ -68,29 +75,35 @@ export default function GardenPage() {
     //Check if no plant selected (do nothing)
     if (currentPlant == "") {
     } else {
-      console.log(currentIslandDisplay, currentPlant);
-      console.log("HERE")
-      console.log(currentIslandDisplay[(0, index)])
-      console.log(currentPlant)
-      console.log([currentPlant])
-      console.log(currentIslandDisplay[(0, index)].concat([currentPlant]))
+      //TODO: CHECK IF PLANT ALREADY EXISTS IN SAID POSITION
 
+      // Update the plant onto said position
+      // console.log(currentIslandDisplay, currentPlant);
+      // console.log("HERE")
+      // console.log(currentIslandDisplay[(0, index)])
+      // console.log(currentPlant)
+      // console.log([currentPlant])
+      // console.log(currentIslandDisplay[(0, index)].concat([currentPlant]))
 
-      const firstHalf = currentIslandDisplay.slice(0, index).concat([currentPlant]);
-      console.log("firsthalf");
-      console.log(firstHalf);
+      const firstHalf = currentIslandDisplay
+        .slice(0, index)
+        .concat([currentPlant]);
+      // console.log("firsthalf");
+      // console.log(firstHalf);
       const secondHalf = firstHalf.concat(
         currentIslandDisplay.slice(index + 1, 23)
       );
-      console.log("secondhalf)");
-      console.log(secondHalf);
+      // console.log("secondhalf)");
+      // console.log(secondHalf);
 
       setCurrentIslandDisplay(secondHalf);
       // setCurrentIslandDisplay([BirdTree,"","","","","","","","","","","","","","","","","","","","","",""]);
-      console.log("hey");
-      console.log(currentIslandDisplay);
+      // console.log("hey");
+      // console.log(currentIslandDisplay);
 
+      // Reset to initial shop screen
       setCurrentPlant("");
+      setShopEnabled(true);
     }
   };
 
@@ -112,23 +125,30 @@ export default function GardenPage() {
               <h4 className="coin-count">Coins</h4>
             </div>
 
-            <div className="shop-listings">
-              <img
-                onClick={() => {
-                  handlePurchase(BirdTree);
-                }}
-                className="listing"
-                src={BirdTreeListing}
-              />
-              <img
-                onClick={() => {
-                  handlePurchase(FloweringTree);
-                }}
-                className="listing"
-                src={FloweringTreeListing}
-              />
-              <h4>sdf</h4>
-            </div>
+            {shopEnabled ? (
+              <div className="shop-listings">
+                <img
+                  onClick={() => {
+                    handlePurchase(BirdTree);
+                  }}
+                  className="listing"
+                  src={BirdTreeListing}
+                />
+                <img
+                  onClick={() => {
+                    handlePurchase(FloweringTree);
+                  }}
+                  className="listing"
+                  src={FloweringTreeListing}
+                />
+              </div>
+            ) : (
+              <div>
+                <h3>Congrats! Please place down your new plant!</h3>
+                <img className="display-plant" src={currentPlant} />
+
+              </div>
+            )}
           </div>
         </div>
 
@@ -288,7 +308,9 @@ export default function GardenPage() {
             </div>
           </div>
 
-          <div className="info-bg"></div>
+          <div className="info-bg">
+            <h2>{currentStatusMessage}</h2>
+          </div>
         </div>
       </div>
     </>

@@ -61,6 +61,11 @@
   float: right;
 }
 
+.display-plant {
+  height: 100px;
+  width: auto;
+}
+
 /* Buttons */
 
 .roadmap-button {
