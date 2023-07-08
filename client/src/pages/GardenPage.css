@@ -1,10 +1,64 @@
 .wrapper {
-    display: grid;
-    grid-template-columns: 500px 1fr;
-  }
+  display: grid;
+  grid-template-columns: 500px 1fr;
+}
 
-  .store-bg {
-    height: 500px;
-    width: 500px;
-    background-color:red;
-  }
+.left {
+  background-color: pink;
+  height: 88vh;
+  padding: 25px 35px 25px 35px;
+}
+
+.right {
+  background-color: lightcoral;
+  text-align: center;
+}
+
+/* div Bgs */
+
+.store-bg {
+  height: 20px;
+  width: 100%;
+  background-color: red;
+}
+
+.info-bg {
+  height: 80px;
+  width: 81.75%;
+  margin: 5px 90px 50px 90px;
+  background-color: #2A6025;
+  border-radius: 20px;
+}
+
+/* Buttons */
+
+.roadmap-button {
+  height: 35px;
+  width: auto;
+}
+
+.roadmap-button:hover {
+  opacity: 80%;
+  cursor: pointer;
+}
+
+/* Island overlay */
+.island-container {
+  background-image: url("../assets/island.png");
+  background-size: 100%;
+  background-color: red;
+  height: 445px;
+  width: auto;
+  margin: 60px 90px 20px 90px;
+}
+
+.island {
+  position: relative;
+  height: 500px;
+}
+
+.island-overlay {
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+}
