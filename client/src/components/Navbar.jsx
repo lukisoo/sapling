@@ -9,6 +9,7 @@ const Navbar = () => {
             <div>
                 <img src="logo.png" alt="grassly logo" />
                 <NavLink exact to="/" activeClassName="active">Home</NavLink>
+                <NavLink to="/profile" activeClassName="active">Profile</NavLink>
                 <NavLink to="/garden" activeClassName="active">Garden</NavLink>
             </div>
 
