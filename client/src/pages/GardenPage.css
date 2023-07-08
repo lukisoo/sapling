@@ -21,7 +21,7 @@ body {
 /* div Bgs */
 
 .store-bg {
-  height: 500px;
+  height: 520px;
   width: 90%;
   /* background-color: red; */
   background-color: #2A6025;
@@ -32,10 +32,14 @@ body {
 }
 
 .info-bg {
-  height: 80px;
-  width: 81.75%;
+  height: 70px;
+  width: 90.75%;
   background-color: #2A6025;
   border-radius: 20px;
+  color: white;
+  text-align: center;
+  padding-top: 8px;
+  margin-left: 50px;
 }
 
 /* Shop */

@@ -88,7 +88,6 @@ export default function GardenPage() {
   const [shopEnabled, setShopEnabled] = useState(true);
 
   const handlePurchase = (selectedPlant, cost) => {
-    //TODO CHECK MONEY IF POSSIBLE
 
     if (cost > currentCoins) {
       setCurrentStatusMessage(
@@ -103,7 +102,6 @@ export default function GardenPage() {
   };
 
   const handleIslandUpdate = (index) => {
-    //TODO CHECK IF THERE IS A PLANT EXISTING ALREADY (DENY THEM)
 
     //Check if no plant selected (do nothing)
     if (currentPlant == "") {
@@ -111,35 +109,40 @@ export default function GardenPage() {
         "Please buy a plant first before you can place it!"
       );
     } else {
-      //TODO: CHECK IF PLANT ALREADY EXISTS IN SAID POSITION
 
-      // Update the plant onto said position
-      // console.log(currentIslandDisplay, currentPlant);
-      // console.log("HERE")
-      // console.log(currentIslandDisplay[(0, index)])
-      // console.log(currentPlant)
-      // console.log([currentPlant])
-      // console.log(currentIslandDisplay[(0, index)].concat([currentPlant]))
+      if (currentIslandDisplay[index] != "") {
+        // Check if a plant is already there
+        setCurrentStatusMessage("There's already a plant there, try again.");
+      } else {
+        // Update the plant onto said position
+        // console.log(currentIslandDisplay, currentPlant);
+        // console.log("HERE")
+        // console.log(currentIslandDisplay[(0, index)])
+        // console.log(currentPlant)
+        // console.log([currentPlant])
+        // console.log(currentIslandDisplay[(0, index)].concat([currentPlant]))
 
-      const firstHalf = currentIslandDisplay
-        .slice(0, index)
-        .concat([currentPlant]);
-      // console.log("firsthalf");
-      // console.log(firstHalf);
-      const secondHalf = firstHalf.concat(
-        currentIslandDisplay.slice(index + 1, 25)
-      );
-      // console.log("secondhalf)");
-      // console.log(secondHalf);
+        const firstHalf = currentIslandDisplay
+          .slice(0, index)
+          .concat([currentPlant]);
+        // console.log("firsthalf");
+        // console.log(firstHalf);
+        const secondHalf = firstHalf.concat(
+          currentIslandDisplay.slice(index + 1, 25)
+        );
+        // console.log("secondhalf)");
+        // console.log(secondHalf);
 
-      setCurrentIslandDisplay(secondHalf);
-      // setCurrentIslandDisplay([BirdTree,"","","","","","","","","","","","","","","","","","","","","",""]);
-      // console.log("hey");
-      // console.log(currentIslandDisplay);
+        setCurrentIslandDisplay(secondHalf);
+        // setCurrentIslandDisplay([BirdTree,"","","","","","","","","","","","","","","","","","","","","",""]);
+        // console.log("hey");
+        // console.log(currentIslandDisplay);
 
-      // Reset to initial shop screen
-      setCurrentPlant("");
-      setShopEnabled(true);
+        // Reset to initial shop screen
+        setCurrentStatusMessage("Keep going!");
+        setCurrentPlant("");
+        setShopEnabled(true);
+      }
     }
   };
 
@@ -256,15 +259,16 @@ export default function GardenPage() {
               </div>
             ) : (
               <div className="purchase-announcement">
-                <img className="display-plant" src={currentPlant} />
-                <h3 className="announcement-text">
-                  Congrats! Please place down your new plant!
-                </h3>
                 <br />
-                <h4>
+                <img className="display-plant" src={currentPlant} />
+                <h2 className="announcement-text">
+                  Congrats! Please place down your new plant!
+                </h2>
+                <br />
+                <h3>
                   Select any blank space in your garden to the right to place
                   your plant down.
-                </h4>
+                </h3>
               </div>
             )}
           </div>
