@@ -7,8 +7,14 @@ import ProfilePage from './pages/ProfilePage';
 import Navbar from './components/Navbar';
 
 function App() {
+  const appStyle = {
+    backgroundColor: '#E9FFE9',
+    minHeight: '100vh',
+    minWidth: '100vw',
+  };
+  
   return (
-    <div>
+    <div style={appStyle}>
       <Navbar />
       <Routes>
           <Route path="/" element={<HomePage />}/>
