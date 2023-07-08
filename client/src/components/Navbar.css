@@ -2,8 +2,10 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: lightgreen;
-    padding: 2vh;
+    background-color: #2A6025;
+    padding: 15px;
+    left: 0;
+    top: 0;
 }
 
 nav div:first-child {
@@ -19,7 +21,6 @@ nav div:first-child a {
 }
 
 nav div:first-child .active {
-    color: darkgreen;
     font-weight: bold;
 }
 
@@ -41,7 +42,6 @@ nav div:last-child img {
 }
 
 nav div:last-child span {
-    color: darkgreen;
     font-size: 1.2em;
     margin-left: 10px;
 }

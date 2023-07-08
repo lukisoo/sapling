@@ -6,7 +6,7 @@ html, body {
 }
 
 body {
-  font-family: 'Comic Sans MS', sans-serif;
+  font-family: '@expo-google-fonts/balsamiq-sans', sans-serif;
 }
 
 #profile-page {
