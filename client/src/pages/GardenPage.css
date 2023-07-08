@@ -17,9 +17,13 @@
 /* div Bgs */
 
 .store-bg {
-  height: 20px;
-  width: 100%;
+  height: 800px;
+  width: 90%;
   background-color: red;
+  background-color: #2A6025;
+  border-radius: 20px;
+  padding: 3% 5% 3% 5%;
+
 }
 
 .info-bg {
@@ -28,6 +32,33 @@
   margin: 5px 90px 50px 90px;
   background-color: #2A6025;
   border-radius: 20px;
+}
+
+/* Shop */
+.shop-listings {
+
+}
+
+.listing {
+  width: 100%;
+}
+
+.listing:hover {
+  opacity: 80%;
+  cursor: pointer;
+}
+
+.shop-title {
+  display:inline-block;
+  width: 50px;
+  /* float: left; */
+  margin-left: 160px;
+}
+
+.coin-count {
+  display: inline-block;
+  width: 80px;
+  float: right;
 }
 
 /* Buttons */
