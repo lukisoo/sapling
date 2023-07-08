@@ -76,6 +76,8 @@ export default function GardenPage() {
     "",
   ]);
 
+  const [currentCoins, setCurrentCoins] = useState(1000);
+
   const [currentPlant, setCurrentPlant] = useState("");
 
   const [currentStatusMessage, setCurrentStatusMessage] = useState(
@@ -84,13 +86,19 @@ export default function GardenPage() {
 
   const [shopEnabled, setShopEnabled] = useState(true);
 
-  const handlePurchase = (selectedPlant) => {
+  const handlePurchase = (selectedPlant, cost) => {
     //TODO CHECK MONEY IF POSSIBLE
-    // Enable click to add
 
-    // Plant successfully selected -> need to add to island
-    setShopEnabled(false);
-    setCurrentPlant(selectedPlant);
+    if (cost > currentCoins) {
+      setCurrentStatusMessage("You do not have enough coins to purchase this plant!")
+    } else {
+      // Plant successfully selected -> need to add to island
+      setCurrentCoins(currentCoins-cost);
+      setShopEnabled(false);
+      setCurrentPlant(selectedPlant);
+
+      
+    }
   };
 
   const handleIslandUpdate = (index) => {
@@ -147,105 +155,105 @@ export default function GardenPage() {
           <div className="store-bg">
             <div className="shop-heading">
               <h3 className="shop-title">Store</h3>
-              <h4 className="coin-count">Coins</h4>
+              <h4 className="coin-count">Coins: ${currentCoins}</h4>
             </div>
 
             {shopEnabled ? (
               <div className="shop-listings">
                 <img
                   onClick={() => {
-                    handlePurchase(PurpleProfusion);
+                    handlePurchase(PurpleProfusion, 200);
                   }}
                   className="listing"
                   src={PurpleProfusionListing}
                 />
                 <img
                   onClick={() => {
-                    handlePurchase(DogwoodBlossoms);
+                    handlePurchase(DogwoodBlossoms, 100);
                   }}
                   className="listing"
                   src={DogwoodBlossomsListing}
                 />
                 <img
                   onClick={() => {
-                    handlePurchase(Sunflowers);
+                    handlePurchase(Sunflowers, 200);
                   }}
                   className="listing"
                   src={SunflowersListing}
                 />
                 <img
                   onClick={() => {
-                    handlePurchase(CherryBlossoms);
+                    handlePurchase(CherryBlossoms, 400);
                   }}
                   className="listing"
                   src={CherryBlossomsListing}
                 />
                 <img
                   onClick={() => {
-                    handlePurchase(PinkLotus);
+                    handlePurchase(PinkLotus, 500);
                   }}
                   className="listing"
                   src={PinkLotusListing}
                 />
                 <img
                   onClick={() => {
-                    handlePurchase(AssortedFlowers);
+                    handlePurchase(AssortedFlowers, 300);
                   }}
                   className="listing"
                   src={AssortedFlowersListing}
                 />
                 <img
                   onClick={() => {
-                    handlePurchase(PurpleLotus);
+                    handlePurchase(PurpleLotus, 500);
                   }}
                   className="listing"
                   src={PurpleLotusListing}
                 />
                 <img
                   onClick={() => {
-                    handlePurchase(Daisies);
+                    handlePurchase(Daisies, 100);
                   }}
                   className="listing"
                   src={DaisiesListing}
                 />
                 <img
                   onClick={() => {
-                    handlePurchase(FloweringTree);
+                    handlePurchase(FloweringTree, 200);
                   }}
                   className="listing"
                   src={FloweringTreeListing}
                 />
                 <img
                   onClick={() => {
-                    handlePurchase(PineTree);
+                    handlePurchase(PineTree, 100);
                   }}
                   className="listing"
                   src={PineTreeListing}
                 />
                 <img
                   onClick={() => {
-                    handlePurchase(Treehouse);
+                    handlePurchase(Treehouse, 400);
                   }}
                   className="listing"
                   src={TreehouseListing}
                 />
                 <img
                   onClick={() => {
-                    handlePurchase(CurvingTree);
+                    handlePurchase(CurvingTree, 100);
                   }}
                   className="listing"
                   src={CurvingTreeListing}
                 />
                 <img
                   onClick={() => {
-                    handlePurchase(BirdTree);
+                    handlePurchase(BirdTree, 200);
                   }}
                   className="listing"
                   src={BirdTreeListing}
                 />
               </div>
             ) : (
-              <div>
+              <div className="purchase-announcement">
                 <h3>Congrats! Please place down your new plant!</h3>
                 <img className="display-plant" src={currentPlant} />
               </div>

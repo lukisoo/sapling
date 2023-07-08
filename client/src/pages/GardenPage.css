@@ -28,7 +28,6 @@ body {
   border-radius: 20px;
   padding: 3% 5% 3% 5%;
   margin-top: 3%;
-  overflow: scroll;
 
 }
 
@@ -43,6 +42,13 @@ body {
 .shop-heading {
   color: white;
 
+}
+
+.shop-listings {
+  height: 400px;
+  width: 100%;
+  overflow-y: scroll;
+  /* overflow: scroll; */
 }
 
 .listing {
@@ -70,6 +76,11 @@ body {
 .display-plant {
   height: 100px;
   width: auto;
+}
+
+.purchase-announcement {
+  text-align: center;
+  width: 100%;
 }
 
 /* Buttons */
