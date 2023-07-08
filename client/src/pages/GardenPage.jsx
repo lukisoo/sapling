@@ -1,9 +1,10 @@
 import React from "react";
 import "./GardenPage.css";
 
-
 //components are fake
 import RoadmapButton from "../assets/return-to-roadmap-button.png";
+import Coin from "../assets/coin.png";
+
 import BirdTree from "../assets/plants/bird-tree.png";
 import FloweringTree from "../assets/plants/flowering-tree.png";
 import PurpleProfusion from "../assets/plants/purple-profusion.png";
@@ -90,14 +91,14 @@ export default function GardenPage() {
     //TODO CHECK MONEY IF POSSIBLE
 
     if (cost > currentCoins) {
-      setCurrentStatusMessage("You do not have enough coins to purchase this plant!")
+      setCurrentStatusMessage(
+        "You do not have enough coins to purchase this plant!"
+      );
     } else {
       // Plant successfully selected -> need to add to island
-      setCurrentCoins(currentCoins-cost);
+      setCurrentCoins(currentCoins - cost);
       setShopEnabled(false);
       setCurrentPlant(selectedPlant);
-
-      
     }
   };
 
@@ -154,8 +155,9 @@ export default function GardenPage() {
 
           <div className="store-bg">
             <div className="shop-heading">
-              <h3 className="shop-title">Store</h3>
-              <h4 className="coin-count">Coins: ${currentCoins}</h4>
+              <h2 className="shop-title">Store</h2>
+              <img className="coin" src={Coin} />
+              <span className="coin-count"> {currentCoins}</span>
             </div>
 
             {shopEnabled ? (
@@ -254,8 +256,15 @@ export default function GardenPage() {
               </div>
             ) : (
               <div className="purchase-announcement">
-                <h3>Congrats! Please place down your new plant!</h3>
                 <img className="display-plant" src={currentPlant} />
+                <h3 className="announcement-text">
+                  Congrats! Please place down your new plant!
+                </h3>
+                <br />
+                <h4>
+                  Select any blank space in your garden to the right to place
+                  your plant down.
+                </h4>
               </div>
             )}
           </div>
