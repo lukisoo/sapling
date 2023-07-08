@@ -7,7 +7,7 @@ const Navbar = () => {
     return (
         <nav>
             <div>
-                <img src="logo.png" alt="grassly logo" />
+                <img className="navbar-logo" src="logo.png" alt="grassly logo" />
                 <NavLink exact to="/" activeClassName="active">Home</NavLink>
                 <NavLink to="/profile" activeClassName="active">Profile</NavLink>
                 <NavLink to="/garden" activeClassName="active">Garden</NavLink>
