@@ -2,9 +2,10 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/server.js",
+  "type": "module",
   "scripts": {
-    "dev": "nodemon -r esm src/server.js"
+    "dev": "nodemon --experimental-modules src/server.js"
   },
   "author": "",
   "license": "ISC",

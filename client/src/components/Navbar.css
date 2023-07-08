@@ -1,0 +1,47 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightgreen;
+    padding: 15px;
+}
+
+nav div:first-child {
+    display: flex;
+    align-items: center; /* Centers content vertically */
+    gap: 10px;
+}
+
+nav div:first-child a {
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+nav div:first-child .active {
+    color: darkgreen;
+    font-weight: bold;
+}
+
+nav div:first-child h1 {
+    color: white;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+nav div:last-child {
+    display: flex;
+    align-items: center;
+}
+
+nav div:last-child img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+nav div:last-child span {
+    color: darkgreen;
+    font-size: 1.2em;
+    margin-left: 10px;
+}
