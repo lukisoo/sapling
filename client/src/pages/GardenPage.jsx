@@ -146,7 +146,6 @@ export default function GardenPage() {
               <div>
                 <h3>Congrats! Please place down your new plant!</h3>
                 <img className="display-plant" src={currentPlant} />
-
               </div>
             )}
           </div>
@@ -216,25 +215,61 @@ export default function GardenPage() {
                 <div id="1" className="grid-box placeholder"></div>
                 <div id="1" className="grid-box placeholder"></div>
 
-                <div id="1" className="grid-box valid">
+                <div
+                  id="5"
+                  onClick={() => {
+                    handleIslandUpdate(5);
+                  }}
+                  className="grid-box valid"
+                >
                   {" "}
-                  <img className="grid-icon" src={""} />
+                  <img className="grid-icon" src={currentIslandDisplay[5]} />
                 </div>
-                <div id="1" className="grid-box valid">
+                <div
+                  id="6"
+                  onClick={() => {
+                    handleIslandUpdate(6);
+                  }}
+                  className="grid-box valid"
+                >
                   {" "}
-                  <img className="grid-icon" src={""} />
+                  <img className="grid-icon" src={currentIslandDisplay[6]} />
                 </div>
-                <div id="1" className="grid-box valid">
-                  <img className="grid-icon" src={""} />
+                <div
+                  id="7"
+                  onClick={() => {
+                    handleIslandUpdate(7);
+                  }}
+                  className="grid-box valid"
+                >
+                  <img className="grid-icon" src={currentIslandDisplay[7]} />
                 </div>
-                <div id="1" className="grid-box valid">
-                  <img className="grid-icon" src={""} />
+                <div
+                  id="8"
+                  onClick={() => {
+                    handleIslandUpdate(8);
+                  }}
+                  className="grid-box valid"
+                >
+                  <img className="grid-icon" src={currentIslandDisplay[8]} />
                 </div>
-                <div id="1" className="grid-box valid">
-                  <img className="grid-icon" src={""} />
+                <div
+                  id="9"
+                  onClick={() => {
+                    handleIslandUpdate(9);
+                  }}
+                  className="grid-box valid"
+                >
+                  <img className="grid-icon" src={currentIslandDisplay[9]} />
                 </div>
-                <div id="1" className="grid-box valid">
-                  <img className="grid-icon" src={""} />
+                <div
+                  id="10"
+                  onClick={() => {
+                    handleIslandUpdate(10);
+                  }}
+                  className="grid-box valid"
+                >
+                  <img className="grid-icon" src={currentIslandDisplay[10]} />
                 </div>
 
                 <div id="1" className="grid-box placeholder"></div>
@@ -243,39 +278,90 @@ export default function GardenPage() {
                 <div id="1" className="grid-box placeholder"></div>
                 <div id="1" className="grid-box placeholder"></div>
 
-                <div id="1" className="grid-box valid">
-                  {" "}
-                  <img className="grid-icon" src={""} />
+                <div
+                  id="11"
+                  onClick={() => {
+                    handleIslandUpdate(11);
+                  }}
+                  className="grid-box valid"
+                >
+                  <img className="grid-icon" src={currentIslandDisplay[11]} />
                 </div>
-                <div id="1" className="grid-box valid">
-                  {" "}
-                  <img className="grid-icon" src={""} />
+                <div
+                  id="12"
+                  onClick={() => {
+                    handleIslandUpdate(12);
+                  }}
+                  className="grid-box valid"
+                >
+                  <img className="grid-icon" src={currentIslandDisplay[12]} />
                 </div>
-                <div id="1" className="grid-box valid">
-                  {" "}
-                  <img className="grid-icon" src={""} />
+                <div
+                  id="13"
+                  onClick={() => {
+                    handleIslandUpdate(13);
+                  }}
+                  className="grid-box valid"
+                >
+                  <img className="grid-icon" src={currentIslandDisplay[13]} />
                 </div>
-                <div id="1" className="grid-box valid">
-                  {" "}
-                  <img className="grid-icon" src={""} />
+                <div
+                  id="14"
+                  onClick={() => {
+                    handleIslandUpdate(14);
+                  }}
+                  className="grid-box valid"
+                >
+                  <img className="grid-icon" src={currentIslandDisplay[14]} />
                 </div>
-                <div id="1" className="grid-box valid">
-                  {" "}
-                  <img className="grid-icon" src={""} />
+                <div
+                  id="15"
+                  onClick={() => {
+                    handleIslandUpdate(15);
+                  }}
+                  className="grid-box valid"
+                >
+                  <img className="grid-icon" src={currentIslandDisplay[15]} />
                 </div>
-                <div id="1" className="grid-box valid">
-                  {" "}
-                  <img className="grid-icon" src={""} />
+                <div
+                  id="16"
+                  onClick={() => {
+                    handleIslandUpdate(16);
+                  }}
+                  className="grid-box valid"
+                >
+                  <img className="grid-icon" src={currentIslandDisplay[16]} />
                 </div>
-                <div id="1" className="grid-box valid">
-                  {" "}
-                  <img className="grid-icon" src={""} />
+                <div
+                  id="17"
+                  onClick={() => {
+                    handleIslandUpdate(17);
+                  }}
+                  className="grid-box valid"
+                >
+                  <img className="grid-icon" src={currentIslandDisplay[17]} />
                 </div>
 
                 <div id="1" className="grid-box placeholder"></div>
 
-                <div id="1" className="grid-box valid"></div>
-                <div id="1" className="grid-box valid"></div>
+                <div
+                  id="18"
+                  onClick={() => {
+                    handleIslandUpdate(18);
+                  }}
+                  className="grid-box valid"
+                >
+                  <img className="grid-icon" src={currentIslandDisplay[18]} />
+                </div>
+                <div
+                  id="19"
+                  onClick={() => {
+                    handleIslandUpdate(19);
+                  }}
+                  className="grid-box valid"
+                >
+                  <img className="grid-icon" src={currentIslandDisplay[19]} />
+                </div>
 
                 <div id="1" className="grid-box placeholder"></div>
                 <div id="1" className="grid-box placeholder"></div>
@@ -283,21 +369,41 @@ export default function GardenPage() {
                 <div id="1" className="grid-box placeholder"></div>
                 <div id="1" className="grid-box placeholder"></div>
 
-                <div id="1" className="grid-box valid">
-                  {" "}
-                  <img className="grid-icon" src={""} />
+                <div
+                  id="1"
+                  onClick={() => {
+                    handleIslandUpdate(20);
+                  }}
+                  className="grid-box valid"
+                >
+                  <img className="grid-icon" src={currentIslandDisplay[20]} />
                 </div>
-                <div id="1" className="grid-box valid">
-                  {" "}
-                  <img className="grid-icon" src={""} />
+                <div
+                  id="1"
+                  onClick={() => {
+                    handleIslandUpdate(21);
+                  }}
+                  className="grid-box valid"
+                >
+                  <img className="grid-icon" src={currentIslandDisplay[21]} />
                 </div>
-                <div id="1" className="grid-box valid">
-                  {" "}
-                  <img className="grid-icon" src={""} />
+                <div
+                  id="1"
+                  onClick={() => {
+                    handleIslandUpdate(22);
+                  }}
+                  className="grid-box valid"
+                >
+                  <img className="grid-icon" src={currentIslandDisplay[22]} />
                 </div>
-                <div id="1" className="grid-box valid">
-                  {" "}
-                  <img className="grid-icon" src={""} />
+                <div
+                  id="1"
+                  onClick={() => {
+                    handleIslandUpdate(23);
+                  }}
+                  className="grid-box valid"
+                >
+                  <img className="grid-icon" src={currentIslandDisplay[23]} />
                 </div>
 
                 <div id="1" className="grid-box placeholder"></div>
