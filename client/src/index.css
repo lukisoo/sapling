@@ -9,6 +9,17 @@ body {
   font-family: 'Comic Sans MS', sans-serif;
 }
 
+#profile-page {
+  border: px solid #172ce9; /* Example border styling */
+  padding: 20px 0px 0px 0px;
+  height: 80vh;
+  width: 65vw;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: auto;
+}
+
 #statistics-box-number {
   font-size: 25px;
   font-weight: bold;
@@ -45,9 +56,96 @@ body {
   margin-top: 7px;
 }
 
+#user {
+  width: 600px;
+  border: 0px solid #172ce9; /* Example border styling */
+  position: relative;
+}
+
 #user-statistics {
   display: flex;
   width: 500px;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+#user-information h1 {
+  margin-top: 50px;
+  margin-bottom: -5px;
+  color: #2A6025;
+}
+
+#user-details h1 {
+  margin-bottom: -25px;
+  color: #2A6025;
+}
+
+#user-details h2 {
+  margin-bottom: -10px;
+  font-weight: 200;
+  color: #2A6025;
+}
+
+
+#leaderboard-box {
+  width: 500px;
+  height:100px;
+  border: 0px solid black; /* Example border styling */
+}
+
+#leaderboard-box:hover {
+  background-color: #cae6ff;
+}
+
+#leaderboard-text {
+  width: 500px;
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: 0px;
+  color: #2A6025;
+}
+
+#leaderboard {
+  border: 0px solid red; /* Example border styling */
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 550px;
+
+}
+
+#leaderboard-box {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 0px;
+  padding-top: 2.5px;
+  padding-bottom: 2.5px;
+}
+
+#leaderboard-box * {
+  color: #2A6025
+}
+
+#leaderboard-box button {
+  width: 100px; 
+  height: 40px; 
+  border-radius:20px 20px 20px 20px;
+  border: 0px;
+  color: white;
+  background-color:#2A6025;
+  font-size: 20px;
+  font-weight: 550;
+}
+
+#leaderboard-detail h1 {
+  font-size: 23px;
+  margin-bottom: -14px;
+  margin-top: -14px;
+  font-weight: 1000;
+}
+
+#leaderboard-detail h3 {
+  font-size: 15px;
 }

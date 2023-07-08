@@ -3,7 +3,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     background-color: lightgreen;
-    padding: 15px;
+    padding: 2vh;
 }
 
 nav div:first-child {
