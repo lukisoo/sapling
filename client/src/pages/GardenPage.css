@@ -1,3 +1,7 @@
+body {
+  overflow: hidden;
+}
+
 .wrapper {
   display: grid;
   grid-template-columns: 500px 1fr;
@@ -24,6 +28,7 @@
   border-radius: 20px;
   padding: 3% 5% 3% 5%;
   margin-top: 3%;
+  overflow: scroll;
 
 }
 
@@ -121,11 +126,11 @@
 .valid {
   /* background-color: green; */
   border-radius: 15px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.15);
   cursor: pointer;
 }
 
 .valid:hover {
-  background-color: green;
+  background-color: rgb(0, 208, 0);
   opacity: 0.5;
 }

@@ -1,12 +1,36 @@
 import React from "react";
 import "./GardenPage.css";
 
+
+//components are fake
 import RoadmapButton from "../assets/return-to-roadmap-button.png";
 import BirdTree from "../assets/plants/bird-tree.png";
 import FloweringTree from "../assets/plants/flowering-tree.png";
+import PurpleProfusion from "../assets/plants/purple-profusion.png";
+import DogwoodBlossoms from "../assets/plants/dogwood-blossoms.png";
+import Sunflowers from "../assets/plants/sunflowers.png";
+import CherryBlossoms from "../assets/plants/cherry-blossoms.png";
+import PinkLotus from "../assets/plants/pink-lotus.png";
+import AssortedFlowers from "../assets/plants/assorted-flowers.png";
+import PurpleLotus from "../assets/plants/purple-lotus.png";
+import Daisies from "../assets/plants/daisies.png";
+import PineTree from "../assets/plants/pine-tree.png";
+import Treehouse from "../assets/plants/treehouse.png";
+import CurvingTree from "../assets/plants/curving-tree.png";
 
 import BirdTreeListing from "../assets/shop-listings/bird-tree.png";
 import FloweringTreeListing from "../assets/shop-listings/flowering-tree.png";
+import PurpleProfusionListing from "../assets/shop-listings/purple-profusion.png";
+import DogwoodBlossomsListing from "../assets/shop-listings/dogwood-blossoms.png";
+import SunflowersListing from "../assets/shop-listings/sunflowers.png";
+import CherryBlossomsListing from "../assets/shop-listings/cherry-blossoms.png";
+import PinkLotusListing from "../assets/shop-listings/pink-lotus.png";
+import AssortedFlowersListing from "../assets/shop-listings/assorted-flowers.png";
+import PurpleLotusListing from "../assets/shop-listings/purple-lotus.png";
+import DaisiesListing from "../assets/shop-listings/daisies.png";
+import PineTreeListing from "../assets/shop-listings/pine-tree.png";
+import TreehouseListing from "../assets/shop-listings/treehouse.png";
+import CurvingTreeListing from "../assets/shop-listings/curving-tree.png";
 
 // import {
 //   RecoilRoot,
@@ -130,10 +154,59 @@ export default function GardenPage() {
               <div className="shop-listings">
                 <img
                   onClick={() => {
-                    handlePurchase(BirdTree);
+                    handlePurchase(PurpleProfusion);
                   }}
                   className="listing"
-                  src={BirdTreeListing}
+                  src={PurpleProfusionListing}
+                />
+                <img
+                  onClick={() => {
+                    handlePurchase(DogwoodBlossoms);
+                  }}
+                  className="listing"
+                  src={DogwoodBlossomsListing}
+                />
+                <img
+                  onClick={() => {
+                    handlePurchase(Sunflowers);
+                  }}
+                  className="listing"
+                  src={SunflowersListing}
+                />
+                <img
+                  onClick={() => {
+                    handlePurchase(CherryBlossoms);
+                  }}
+                  className="listing"
+                  src={CherryBlossomsListing}
+                />
+                <img
+                  onClick={() => {
+                    handlePurchase(PinkLotus);
+                  }}
+                  className="listing"
+                  src={PinkLotusListing}
+                />
+                <img
+                  onClick={() => {
+                    handlePurchase(AssortedFlowers);
+                  }}
+                  className="listing"
+                  src={AssortedFlowersListing}
+                />
+                <img
+                  onClick={() => {
+                    handlePurchase(PurpleLotus);
+                  }}
+                  className="listing"
+                  src={PurpleLotusListing}
+                />
+                <img
+                  onClick={() => {
+                    handlePurchase(Daisies);
+                  }}
+                  className="listing"
+                  src={DaisiesListing}
                 />
                 <img
                   onClick={() => {
@@ -141,6 +214,34 @@ export default function GardenPage() {
                   }}
                   className="listing"
                   src={FloweringTreeListing}
+                />
+                <img
+                  onClick={() => {
+                    handlePurchase(PineTree);
+                  }}
+                  className="listing"
+                  src={PineTreeListing}
+                />
+                <img
+                  onClick={() => {
+                    handlePurchase(Treehouse);
+                  }}
+                  className="listing"
+                  src={TreehouseListing}
+                />
+                <img
+                  onClick={() => {
+                    handlePurchase(CurvingTree);
+                  }}
+                  className="listing"
+                  src={CurvingTreeListing}
+                />
+                <img
+                  onClick={() => {
+                    handlePurchase(BirdTree);
+                  }}
+                  className="listing"
+                  src={BirdTreeListing}
                 />
               </div>
             ) : (
