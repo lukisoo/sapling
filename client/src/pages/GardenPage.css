@@ -21,28 +21,39 @@ body {
 /* div Bgs */
 
 .store-bg {
-  height: 500px;
+  height: 520px;
   width: 90%;
   /* background-color: red; */
   background-color: #2A6025;
   border-radius: 20px;
-  padding: 3% 5% 3% 5%;
+  padding: 1% 5% 3% 5%;
   margin-top: 3%;
-  overflow: scroll;
 
 }
 
 .info-bg {
-  height: 80px;
-  width: 81.75%;
+  height: 70px;
+  width: 90.75%;
   background-color: #2A6025;
   border-radius: 20px;
+  color: white;
+  text-align: center;
+  padding-top: 8px;
+  margin-left: 50px;
 }
 
 /* Shop */
 .shop-heading {
   color: white;
+  text-align: center;
+  margin-bottom: 5%;
+}
 
+.shop-listings {
+  height: 400px;
+  width: 100%;
+  overflow-y: scroll;
+  /* overflow: scroll; */
 }
 
 .listing {
@@ -55,21 +66,44 @@ body {
 }
 
 .shop-title {
-  display:inline-block;
-  width: 50px;
+  margin-bottom: 1%;
+  /* display:inline-block;
+  width: 50px; */
   /* float: left; */
-  margin-left: 160px;
+  /* margin-left: 160px; */
+}
+
+.coin {
+  height: 1.3vw;
 }
 
 .coin-count {
-  display: inline-block;
+  margin-top: 2%;
+  font-size: 1.5vw;
+  /* padding-bottom: 20%; */
+  /* display: inline-block;
   width: 80px;
-  float: right;
+  float: right; */
+  /* line-height: 105px; */
 }
 
 .display-plant {
-  height: 100px;
+  height: 80px;
   width: auto;
+}
+
+.purchase-announcement {
+  text-align: center;
+  width: 100%;
+  color:white;
+
+}
+
+.announcement-text {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 5%;
+  height: 2vh;
 }
 
 /* Buttons */

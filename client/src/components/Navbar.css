@@ -23,6 +23,7 @@ nav div:first-child a {
 
 nav div:first-child .active {
     font-weight: bold;
+    border-bottom: 3px solid white;
 }
 
 nav div:first-child h1 {
@@ -45,4 +46,8 @@ nav div:last-child img {
 nav div:last-child span {
     font-size: 1.2em;
     margin-left: 10px;
+}
+
+.navbar-logo {
+    height: 50px;
 }

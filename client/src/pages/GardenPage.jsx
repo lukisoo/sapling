@@ -1,9 +1,10 @@
 import React from "react";
 import "./GardenPage.css";
 
-
 //components are fake
 import RoadmapButton from "../assets/return-to-roadmap-button.png";
+import Coin from "../assets/coin.png";
+
 import BirdTree from "../assets/plants/bird-tree.png";
 import FloweringTree from "../assets/plants/flowering-tree.png";
 import PurpleProfusion from "../assets/plants/purple-profusion.png";
@@ -76,6 +77,8 @@ export default function GardenPage() {
     "",
   ]);
 
+  const [currentCoins, setCurrentCoins] = useState(1000);
+
   const [currentPlant, setCurrentPlant] = useState("");
 
   const [currentStatusMessage, setCurrentStatusMessage] = useState(
@@ -84,17 +87,21 @@ export default function GardenPage() {
 
   const [shopEnabled, setShopEnabled] = useState(true);
 
-  const handlePurchase = (selectedPlant) => {
-    //TODO CHECK MONEY IF POSSIBLE
-    // Enable click to add
+  const handlePurchase = (selectedPlant, cost) => {
 
-    // Plant successfully selected -> need to add to island
-    setShopEnabled(false);
-    setCurrentPlant(selectedPlant);
+    if (cost > currentCoins) {
+      setCurrentStatusMessage(
+        "You do not have enough coins to purchase this plant!"
+      );
+    } else {
+      // Plant successfully selected -> need to add to island
+      setCurrentCoins(currentCoins - cost);
+      setShopEnabled(false);
+      setCurrentPlant(selectedPlant);
+    }
   };
 
   const handleIslandUpdate = (index) => {
-    //TODO CHECK IF THERE IS A PLANT EXISTING ALREADY (DENY THEM)
 
     //Check if no plant selected (do nothing)
     if (currentPlant == "") {
@@ -102,35 +109,40 @@ export default function GardenPage() {
         "Please buy a plant first before you can place it!"
       );
     } else {
-      //TODO: CHECK IF PLANT ALREADY EXISTS IN SAID POSITION
 
-      // Update the plant onto said position
-      // console.log(currentIslandDisplay, currentPlant);
-      // console.log("HERE")
-      // console.log(currentIslandDisplay[(0, index)])
-      // console.log(currentPlant)
-      // console.log([currentPlant])
-      // console.log(currentIslandDisplay[(0, index)].concat([currentPlant]))
+      if (currentIslandDisplay[index] != "") {
+        // Check if a plant is already there
+        setCurrentStatusMessage("There's already a plant there, try again.");
+      } else {
+        // Update the plant onto said position
+        // console.log(currentIslandDisplay, currentPlant);
+        // console.log("HERE")
+        // console.log(currentIslandDisplay[(0, index)])
+        // console.log(currentPlant)
+        // console.log([currentPlant])
+        // console.log(currentIslandDisplay[(0, index)].concat([currentPlant]))
 
-      const firstHalf = currentIslandDisplay
-        .slice(0, index)
-        .concat([currentPlant]);
-      // console.log("firsthalf");
-      // console.log(firstHalf);
-      const secondHalf = firstHalf.concat(
-        currentIslandDisplay.slice(index + 1, 25)
-      );
-      // console.log("secondhalf)");
-      // console.log(secondHalf);
+        const firstHalf = currentIslandDisplay
+          .slice(0, index)
+          .concat([currentPlant]);
+        // console.log("firsthalf");
+        // console.log(firstHalf);
+        const secondHalf = firstHalf.concat(
+          currentIslandDisplay.slice(index + 1, 25)
+        );
+        // console.log("secondhalf)");
+        // console.log(secondHalf);
 
-      setCurrentIslandDisplay(secondHalf);
-      // setCurrentIslandDisplay([BirdTree,"","","","","","","","","","","","","","","","","","","","","",""]);
-      // console.log("hey");
-      // console.log(currentIslandDisplay);
+        setCurrentIslandDisplay(secondHalf);
+        // setCurrentIslandDisplay([BirdTree,"","","","","","","","","","","","","","","","","","","","","",""]);
+        // console.log("hey");
+        // console.log(currentIslandDisplay);
 
-      // Reset to initial shop screen
-      setCurrentPlant("");
-      setShopEnabled(true);
+        // Reset to initial shop screen
+        setCurrentStatusMessage("Keep going!");
+        setCurrentPlant("");
+        setShopEnabled(true);
+      }
     }
   };
 
@@ -146,108 +158,117 @@ export default function GardenPage() {
 
           <div className="store-bg">
             <div className="shop-heading">
-              <h3 className="shop-title">Store</h3>
-              <h4 className="coin-count">Coins</h4>
+              <h2 className="shop-title">Store</h2>
+              <img className="coin" src={Coin} />
+              <span className="coin-count"> {currentCoins}</span>
             </div>
 
             {shopEnabled ? (
               <div className="shop-listings">
                 <img
                   onClick={() => {
-                    handlePurchase(PurpleProfusion);
+                    handlePurchase(PurpleProfusion, 200);
                   }}
                   className="listing"
                   src={PurpleProfusionListing}
                 />
                 <img
                   onClick={() => {
-                    handlePurchase(DogwoodBlossoms);
+                    handlePurchase(DogwoodBlossoms, 100);
                   }}
                   className="listing"
                   src={DogwoodBlossomsListing}
                 />
                 <img
                   onClick={() => {
-                    handlePurchase(Sunflowers);
+                    handlePurchase(Sunflowers, 200);
                   }}
                   className="listing"
                   src={SunflowersListing}
                 />
                 <img
                   onClick={() => {
-                    handlePurchase(CherryBlossoms);
+                    handlePurchase(CherryBlossoms, 400);
                   }}
                   className="listing"
                   src={CherryBlossomsListing}
                 />
                 <img
                   onClick={() => {
-                    handlePurchase(PinkLotus);
+                    handlePurchase(PinkLotus, 500);
                   }}
                   className="listing"
                   src={PinkLotusListing}
                 />
                 <img
                   onClick={() => {
-                    handlePurchase(AssortedFlowers);
+                    handlePurchase(AssortedFlowers, 300);
                   }}
                   className="listing"
                   src={AssortedFlowersListing}
                 />
                 <img
                   onClick={() => {
-                    handlePurchase(PurpleLotus);
+                    handlePurchase(PurpleLotus, 500);
                   }}
                   className="listing"
                   src={PurpleLotusListing}
                 />
                 <img
                   onClick={() => {
-                    handlePurchase(Daisies);
+                    handlePurchase(Daisies, 100);
                   }}
                   className="listing"
                   src={DaisiesListing}
                 />
                 <img
                   onClick={() => {
-                    handlePurchase(FloweringTree);
+                    handlePurchase(FloweringTree, 200);
                   }}
                   className="listing"
                   src={FloweringTreeListing}
                 />
                 <img
                   onClick={() => {
-                    handlePurchase(PineTree);
+                    handlePurchase(PineTree, 100);
                   }}
                   className="listing"
                   src={PineTreeListing}
                 />
                 <img
                   onClick={() => {
-                    handlePurchase(Treehouse);
+                    handlePurchase(Treehouse, 400);
                   }}
                   className="listing"
                   src={TreehouseListing}
                 />
                 <img
                   onClick={() => {
-                    handlePurchase(CurvingTree);
+                    handlePurchase(CurvingTree, 100);
                   }}
                   className="listing"
                   src={CurvingTreeListing}
                 />
                 <img
                   onClick={() => {
-                    handlePurchase(BirdTree);
+                    handlePurchase(BirdTree, 200);
                   }}
                   className="listing"
                   src={BirdTreeListing}
                 />
               </div>
             ) : (
-              <div>
-                <h3>Congrats! Please place down your new plant!</h3>
+              <div className="purchase-announcement">
+                <br />
                 <img className="display-plant" src={currentPlant} />
+                <h2 className="announcement-text">
+                  Congrats! Please place down your new plant!
+                </h2>
+                <br />
+                <h3>
+                  Select any blank space in your garden to the right to place
+                  your plant down.
+                </h3>
               </div>
             )}
           </div>
