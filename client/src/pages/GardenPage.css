@@ -1,0 +1,10 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+  }
+
+  .store-bg {
+    height: 500px;
+    width: 500px;
+    background-color:red;
+  }
