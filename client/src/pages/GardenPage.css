@@ -1,0 +1,136 @@
+body {
+  overflow: hidden;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 500px 1fr;
+}
+
+.left {
+  /* background-color: pink; */
+  height: 88vh;
+  padding: 25px 35px 25px 35px;
+}
+
+.right {
+  /* background-color: lightcoral; */
+  text-align: center;
+}
+
+/* div Bgs */
+
+.store-bg {
+  height: 500px;
+  width: 90%;
+  /* background-color: red; */
+  background-color: #2A6025;
+  border-radius: 20px;
+  padding: 3% 5% 3% 5%;
+  margin-top: 3%;
+  overflow: scroll;
+
+}
+
+.info-bg {
+  height: 80px;
+  width: 81.75%;
+  background-color: #2A6025;
+  border-radius: 20px;
+}
+
+/* Shop */
+.shop-heading {
+  color: white;
+
+}
+
+.listing {
+  width: 100%;
+}
+
+.listing:hover {
+  opacity: 80%;
+  cursor: pointer;
+}
+
+.shop-title {
+  display:inline-block;
+  width: 50px;
+  /* float: left; */
+  margin-left: 160px;
+}
+
+.coin-count {
+  display: inline-block;
+  width: 80px;
+  float: right;
+}
+
+.display-plant {
+  height: 100px;
+  width: auto;
+}
+
+/* Buttons */
+
+.roadmap-button {
+  height: 35px;
+  width: auto;
+}
+
+.roadmap-button:hover {
+  opacity: 80%;
+  cursor: pointer;
+}
+
+/* Island overlay */
+.island-container {
+  background-image: url("../assets/island.png");
+  background-size: 100%;
+  /* background-color: red; */
+  height: 445px;
+  width: auto;
+  margin: 60px 90px 20px 90px;
+}
+
+.island {
+  position: relative;
+  height: 500px;
+}
+
+.island-overlay {
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+}
+
+/* GRID */
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(12, 60px);
+  grid-auto-rows: 60px;
+  /* background-color: yellow;
+  opacity: 50%;
+  border: solid black 3px; */
+}
+
+.grid-box {
+  /* border: solid black 2px; */
+}
+
+.grid-icon {
+  height: 100%;
+}
+
+.valid {
+  /* background-color: green; */
+  border-radius: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+}
+
+.valid:hover {
+  background-color: rgb(0, 208, 0);
+  opacity: 0.5;
+}
