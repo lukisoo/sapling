@@ -1,7 +1,8 @@
 import React from "react";
 import "./GardenPage.css";
 import RoadmapButton from "../assets/return-to-roadmap-button.png";
-import IslandBg from "../assets/island.png";
+import BirdTree from "../assets/bird-tree.png";
+
 import { NavLink } from "react-router-dom";
 // import Xx from "../assets/dirt.svg"
 
@@ -21,8 +22,126 @@ export default function GardenPage() {
           <div className="island-container">
             {/* <img className="island" src={IslandBg} /> */}
             <div className="island-overlay">
-              <h2>test</h2>
-              <h1>IDHFOSDIFHOSDIFH</h1>
+              <div class="grid-container">
+                <div id="1" className="grid-box placeholder"></div>
+                <div id="1" className="grid-box placeholder"></div>
+                <div id="1" className="grid-box placeholder"></div>
+                <div id="1" className="grid-box placeholder"></div>
+
+                <div id="1" className="grid-box valid">
+                  <img className="grid-icon" src={BirdTree} />
+                </div>
+                <div id="1" className="grid-box valid">
+                  <img className="grid-icon" src={""} />
+                </div>
+                <div id="1" className="grid-box valid">
+                  {" "}
+                  <img className="grid-icon" src={""} />
+                </div>
+                <div id="1" className="grid-box valid">
+                  {" "}
+                  <img className="grid-icon" src={""} />
+                </div>
+                <div id="1" className="grid-box valid">
+                  {" "}
+                  <img className="grid-icon" src={""} />
+                </div>
+
+                <div id="1" className="grid-box placeholder"></div>
+                <div id="1" className="grid-box placeholder"></div>
+                <div id="1" className="grid-box placeholder"></div>
+                <div id="1" className="grid-box placeholder"></div>
+                <div id="1" className="grid-box placeholder"></div>
+
+                <div id="1" className="grid-box valid">
+                  {" "}
+                  <img className="grid-icon" src={""} />
+                </div>
+                <div id="1" className="grid-box valid">
+                  {" "}
+                  <img className="grid-icon" src={""} />
+                </div>
+                <div id="1" className="grid-box valid">
+                  <img className="grid-icon" src={""} />
+                </div>
+                <div id="1" className="grid-box valid">
+                  <img className="grid-icon" src={""} />
+                </div>
+                <div id="1" className="grid-box valid">
+                  <img className="grid-icon" src={""} />
+                </div>
+                <div id="1" className="grid-box valid">
+                  <img className="grid-icon" src={""} />
+                </div>
+
+                <div id="1" className="grid-box placeholder"></div>
+                <div id="1" className="grid-box placeholder"></div>
+                <div id="1" className="grid-box placeholder"></div>
+                <div id="1" className="grid-box placeholder"></div>
+                <div id="1" className="grid-box placeholder"></div>
+
+                <div id="1" className="grid-box valid">
+                  {" "}
+                  <img className="grid-icon" src={""} />
+                </div>
+                <div id="1" className="grid-box valid">
+                  {" "}
+                  <img className="grid-icon" src={""} />
+                </div>
+                <div id="1" className="grid-box valid">
+                  {" "}
+                  <img className="grid-icon" src={""} />
+                </div>
+                <div id="1" className="grid-box valid">
+                  {" "}
+                  <img className="grid-icon" src={""} />
+                </div>
+                <div id="1" className="grid-box valid">
+                  {" "}
+                  <img className="grid-icon" src={""} />
+                </div>
+                <div id="1" className="grid-box valid">
+                  {" "}
+                  <img className="grid-icon" src={""} />
+                </div>
+                <div id="1" className="grid-box valid">
+                  {" "}
+                  <img className="grid-icon" src={""} />
+                </div>
+
+                <div id="1" className="grid-box placeholder"></div>
+
+                <div id="1" className="grid-box valid"></div>
+                <div id="1" className="grid-box valid"></div>
+
+                <div id="1" className="grid-box placeholder"></div>
+                <div id="1" className="grid-box placeholder"></div>
+                <div id="1" className="grid-box placeholder"></div>
+                <div id="1" className="grid-box placeholder"></div>
+                <div id="1" className="grid-box placeholder"></div>
+
+                <div id="1" className="grid-box valid">
+                  {" "}
+                  <img className="grid-icon" src={""} />
+                </div>
+                <div id="1" className="grid-box valid">
+                  {" "}
+                  <img className="grid-icon" src={""} />
+                </div>
+                <div id="1" className="grid-box valid">
+                  {" "}
+                  <img className="grid-icon" src={""} />
+                </div>
+                <div id="1" className="grid-box valid">
+                  {" "}
+                  <img className="grid-icon" src={""} />
+                </div>
+
+                <div id="1" className="grid-box placeholder"></div>
+                <div id="1" className="grid-box placeholder"></div>
+                <div id="1" className="grid-box placeholder"></div>
+                <div id="1" className="grid-box placeholder"></div>
+              </div>
             </div>
           </div>
 

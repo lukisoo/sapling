@@ -62,3 +62,26 @@
   top: 0;
   left: 0; */
 }
+
+/* GRID */
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(12, 60px);
+  grid-auto-rows: 60px;
+  background-color: yellow;
+  opacity: 50%;
+  border: solid black 3px;
+}
+
+.grid-box {
+  border: solid black 2px;
+}
+
+.grid-icon {
+  height: 100%;
+}
+
+.valid {
+  background-color: green;
+}
+
