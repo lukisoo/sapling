@@ -37,19 +37,22 @@ export default function ProfilePage() {
     
     const tempLeaderboard = [
       {
-        rank:'1', icon: person, username:'mouyag2001', name:'Matthew Ouyang', xp:'900', userid:'123'
+        rank:'1', icon: person, username:'mouyag2001', name:'Matthew Ouyang', xp:'900', userid:'1'
       },
       {
-        rank:'2', icon: person, username:'mouyag2001', name:'Matthew Ouyang', xp:'900', userid:'123'
+        rank:'2', icon: person, username:'ylei532', name:'Youxiang Lei', xp:'700', userid:'2'
       },
       {
-        rank:'3', icon: person, username:'mouyag2001', name:'Matthew Ouyang', xp:'900', userid:'123'
+        rank:'3', icon: person, username:'whoreytorrey', name:'Daniel Torrey', xp:'500', userid:'3'
       },
       {
-        rank:'4', icon: person, username:'mouyag2001', name:'Matthew Ouyang', xp:'900', userid:'123'
+        rank:'4', icon: person, username:'nroh555', name:'Naren Rohan', xp:'500', userid:'4'
       },
       {
-        rank:'5', icon: person, username:'mouyag2001', name:'Matthew Ouyang', xp:'900', userid:'123'
+        rank:'5', icon: person, username:'lukisoo', name:'Lucy Zhu', xp:'400', userid:'5'
+      },
+      {
+        rank:'6', icon: person, username:'zoemlt', name:'Zoe Niu', xp:'300', userid:'6'
       }
     ]
 
@@ -91,7 +94,6 @@ export default function ProfilePage() {
           <div id="leaderboard-text"> 
             <h1>Leaderboard</h1>
           </div>
-          <LeaderboardBox rank='1' icon={person} username='mouyag2001' name='Matthew Ouyang' xp='900'userid='123'/>
           {renderedLeaderboard}
       </div>
     </div>
