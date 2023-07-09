@@ -32,7 +32,7 @@ const Node = ({ type, task, coins, open }) => {
     }
 
     const handleClick = () => {
-        if (type === "current_0" || type === "current_25" || type === "current_50" || type === "current_75") {
+        if (type === "current_0" || type === "current_25" || type === "current_50" || type === "current_75" || type === "current_100") {
             setPopupVisible(!popupVisible);
         }
     }
