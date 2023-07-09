@@ -1,8 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 import HomeFooter from "../components/HomeFooter";
 import Roadmap from "../components/Roadmap";
-import NodePopup from "../components/NodePopup";
-import nodePopup from "../components/NodePopup";
+import CompleteTaskPopup from "../components/CompleteTaskPopup.jsx";
 
 
 const roadmapItems = [
@@ -22,10 +21,24 @@ const roadmapItems = [
 
 export default function HomePage() {
 
+    const [showPopup, setShowPopup] = useState(false);
+    const [task, setTask] = useState("Random task");
+    const [coins, setCoins] = useState(0);
+
+    const close = () => {
+        setShowPopup(false);
+    }
+
+    const open = (task, coins) => {
+        setTask(task);
+        setCoins(coins);
+        setShowPopup(true);
+    }
 
     return (
         <div style={{display: "flex", flexDirection:"column"}}>
-            <Roadmap items={roadmapItems}/>
+            <Roadmap items={roadmapItems} open={open}/>
+            {showPopup && <CompleteTaskPopup task={task} coins={coins} close={close}/>}
             <HomeFooter />
         </div>
     );
