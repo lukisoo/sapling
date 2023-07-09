@@ -90,6 +90,9 @@ export default function HomePage() {
             setIndex(index + 1);
         }
 
+        
+        setCurrentCoins(currentCoins + roadmapItems[index].coins);
+
         const randomIndex = Math.floor(Math.random() * activities.length);
         //TODO: CHANGE THIS
         const randomCoins = Math.floor(Math.random() * (400 - 100 + 1)) + 100;
@@ -102,7 +105,6 @@ export default function HomePage() {
 
         // TODO: LUCY INCREMENT COINS GLOBALLY AND STREAK
 
-        setCurrentCoins(currentCoins + randomCoins);
 
 
 
