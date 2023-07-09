@@ -90,7 +90,7 @@ body {
 #leaderboard-box {
   width: 500px;
   height:100px;
-  border: 2px solid black; /* Example border styling */
+  border: 0px solid black; /* Example border styling */
 }
 
 #leaderboard-box:hover {
@@ -106,7 +106,7 @@ body {
 }
 
 #leaderboard {
-  border: 2px solid red; /* Example border styling */
+  border: 0px solid red; /* Example border styling */
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -159,7 +159,7 @@ body {
 }
 
 #friends-page {
-  border: 2px solid blue; 
+  border: 0px solid blue; 
   width: 80vw;
   height: 80vh; 
   position: relative;
@@ -169,7 +169,7 @@ body {
 }
 
 #friends {
-  border: 2px solid red; /* Example border styling */
+  border: 0px solid red; /* Example border styling */
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -181,7 +181,7 @@ body {
 }
 
 #garden-preview {
-  border: 2px solid red; 
+  border: 0px solid red; 
   width: 720px;
   transform: scale(0.6);
   position: relative;
