@@ -9,7 +9,7 @@ const LeaderboardBox = ({username, name, xp, icon, rank, userid, backgroundColor
   }
   
   return (
-    <div id="leaderboard-box" style={{backgroundColor: backgroundColor, width: "150%"}} onClick={(e)=>{onFriendClicked(e)}}>
+    <div id="leaderboard-box" className="add-hover" style={{textAlign: "center", backgroundColor: backgroundColor, width: "150%"}} onClick={(e)=>{onFriendClicked(e)}}>
         <h1 style={{width:'30px'}}>{rank}</h1>
         <img src={icon} id='leaderboard-image'/>
         <div id='leaderboard-detail'>

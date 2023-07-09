@@ -14,7 +14,7 @@ import wood from "../assets/wood.svg"
 import person from "../assets/person.svg"
 import Garden1 from "../components/Garden1";
 import Preview1 from "../assets/GardenPreview1.svg";
-import Preview2 from "../assets/GardenPreview2.svg";
+import Preview2 from "../assets/GardenPreview2svg.svg";
 import Preview4 from "../assets/GardenPreview3.svg";
 import Preview5 from "../assets/GardenPreview5.svg";
 import Preview6 from "../assets/GardenPreview6.svg";
