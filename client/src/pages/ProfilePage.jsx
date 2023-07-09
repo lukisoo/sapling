@@ -1,15 +1,15 @@
 import React from "react";
 import StatisticsBox from "../components/StatisticsBox";
 import LeaderboardBox from "../components/LeaderboardBox";
-import fire from "../assets/fire.png";
-import lightning from "../assets/lightning.png"
-import plant from "../assets/plant.png"
-import task from "../assets/task.png"
-import trophy from "../assets/trophy.png"
-import handshake from "../assets/handshake.png"
+import fire from "../assets/fire.svg";
+import lightning from "../assets/lightning.svg"
+import plant from "../assets/plant.svg"
+import task from "../assets/task.svg"
+import trophy from "../assets/trophy.svg"
+import handshake from "../assets/handshake.svg"
 import dirt from "../assets/dirt.svg"
 import rock from "../assets/rock.svg"
-import lock from "../assets/lock.png"
+import lock from "../assets/lock.svg"
 import wood from "../assets/wood.svg"
 import person from "../assets/person.svg"
 
@@ -37,19 +37,22 @@ export default function ProfilePage() {
     
     const tempLeaderboard = [
       {
-        rank:'1', icon: person, username:'mouyag2001', name:'Matthew Ouyang', xp:'900', userid:'123'
+        rank:'1', icon: person, username:'mouyag2001', name:'Matthew Ouyang', xp:'900', userid:'1'
       },
       {
-        rank:'2', icon: person, username:'mouyag2001', name:'Matthew Ouyang', xp:'900', userid:'123'
+        rank:'2', icon: person, username:'ylei532', name:'Youxiang Lei', xp:'700', userid:'2'
       },
       {
-        rank:'3', icon: person, username:'mouyag2001', name:'Matthew Ouyang', xp:'900', userid:'123'
+        rank:'3', icon: person, username:'whoreytorrey', name:'Daniel Torrey', xp:'500', userid:'3'
       },
       {
-        rank:'4', icon: person, username:'mouyag2001', name:'Matthew Ouyang', xp:'900', userid:'123'
+        rank:'4', icon: person, username:'nroh555', name:'Naren Rohan', xp:'500', userid:'4'
       },
       {
-        rank:'5', icon: person, username:'mouyag2001', name:'Matthew Ouyang', xp:'900', userid:'123'
+        rank:'5', icon: person, username:'lukisoo', name:'Lucy Zhu', xp:'400', userid:'5'
+      },
+      {
+        rank:'6', icon: person, username:'zoemlt', name:'Zoe Niu', xp:'300', userid:'6'
       }
     ]
 
@@ -91,7 +94,6 @@ export default function ProfilePage() {
           <div id="leaderboard-text"> 
             <h1>Leaderboard</h1>
           </div>
-          <LeaderboardBox rank='1' icon={person} username='mouyag2001' name='Matthew Ouyang' xp='900'userid='123'/>
           {renderedLeaderboard}
       </div>
     </div>

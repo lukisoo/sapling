@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const LeaderboardBox = ({username, name, xp, icon, rank}) => {
+const LeaderboardBox = ({username, name, xp, icon, rank, userid}) => {
   return (
     <div id="leaderboard-box">
         <h1>{rank}</h1>
@@ -10,7 +11,8 @@ const LeaderboardBox = ({username, name, xp, icon, rank}) => {
             <h1>{name}</h1>
             <h3>{xp} XP</h3>
         </div>
-        <button>VIEW</button>
+        <Link to={`/edit/${userid}`}><button>VIEW</button></Link>
+        
     </div>
   );
 };
