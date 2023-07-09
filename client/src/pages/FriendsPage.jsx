@@ -53,7 +53,7 @@ export default function FriendsPage() {
     ]
 
     const renderedStatisticsList = statistics.map((statistic, index) => {
-        return <StatisticsBox key={index} name={statistic.name} number={statistic.number} imageSrc={statistic.image} color={statistic.color}/>
+        return <StatisticsBox style={{marginLeft: "2%"}} key={index} name={statistic.name} number={statistic.number} imageSrc={statistic.image} color={statistic.color}/>
     });
 
     const renderedLeaderboard = tempLeaderboard.map((record, index) => {

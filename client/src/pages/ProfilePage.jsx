@@ -13,6 +13,8 @@ import lock from "../assets/lock.svg"
 import wood from "../assets/wood.svg"
 import person from "../assets/person.svg"
 
+import ProfileHeading from "../assets/profile-heading.svg";
+
 export default function ProfilePage() {
 
     const statistics = [{
@@ -69,13 +71,15 @@ export default function ProfilePage() {
     return (
     <div id='profile-page'>
       <div id='user'>
-        <div id='user-details'>
+      <img style={{width:"100%"}} src={ProfileHeading}/>
+
+        {/* <div id='user-details'>
             <h1>Daniel Torrey</h1>
             <h2>Whoreytorrey</h2>
             <h2>Joined April 2023</h2>
-        </div>
+        </div> */}
 
-        <div id='user-information'>
+        <div style={{marginLeft: "%"}} id='user-information'>
             <h1>Statistics</h1>
             <div id='user-statistics'>
                 {renderedStatisticsList}
@@ -84,13 +88,13 @@ export default function ProfilePage() {
       </div>
 
       <div id='leaderboard'> 
-          <div id='leaderboard-image'>
+          {/* <div id='leaderboard-image'>
               <img src={wood}/>
               <img src={rock}/>
               <img src={dirt}/>
               <img src={lock}/>
               <img src={lock}/>
-          </div>
+          </div> */}
           <div id="leaderboard-text"> 
             <h1>Leaderboard</h1>
           </div>
