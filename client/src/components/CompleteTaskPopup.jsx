@@ -14,9 +14,6 @@ const CompleteTaskPopup = (props) => {
 
   return (
     <div>
-      <button onClick={togglePopup}>Open Popup</button>
-
-      {showPopup && (
         <div
           style={{
             position: 'fixed',
@@ -50,7 +47,6 @@ const CompleteTaskPopup = (props) => {
                 Matthew
             </p>
         </div>
-      )}
 
       {showPopup && (
         <div

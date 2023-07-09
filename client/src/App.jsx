@@ -7,6 +7,7 @@ import ProfilePage from './pages/ProfilePage';
 import Navbar from './components/Navbar';
 import FriendsPage from './pages/FriendsPage';
 import Profile1 from './components/Profile1';
+import CompleteTaskPage from './pages/CompleteTaskPage';
 
 function App() {
   const appStyle = {
@@ -25,7 +26,7 @@ function App() {
           <Route path="/leaderboard" element={<LeaderboardPage />}/>
           <Route path="/friends" element={<FriendsPage />}/>
           <Route path="/edit/1" element={<Profile1/>}/>
-          
+          <Route path="/task" element={<CompleteTaskPage/>}/>
       </Routes>
     </div>
   )

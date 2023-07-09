@@ -3,9 +3,8 @@ import React from 'react';
 const NodePopup = (props) => {
     const {task, coins} = props;
 
-    const complete = (event) => {
-        event.preventDefault();
-        console.log("open modal");
+    const complete = () => {
+      console.log("Modal Popup")
     }
 
     return (
@@ -33,7 +32,7 @@ const NodePopup = (props) => {
                     +{coins} coins
                 </div>
             </p>
-            <a href="/task">
+            <a href= {`/task?task=${task}&coins=${coins}`}>
                 <button
                     style={{
                         position: 'absolute',
