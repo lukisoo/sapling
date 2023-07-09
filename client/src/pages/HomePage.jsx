@@ -4,7 +4,7 @@ import Roadmap from "../components/Roadmap";
 import CompleteTaskPopup from "../components/CompleteTaskPopup.jsx";
 
 
-const roadmapItems = [
+const roadmapItemsInitial = [
     { type: "finished", task: "Grab coffee with Matthew", coins: 200 },
     { type: "current_0", task: "Go on a 15 minute walk through Albert Park with John", coins: 200 },
     { type: "future", task: "Do a 10 minute breathing meditation with Raymond", coins: 200},
@@ -24,6 +24,8 @@ export default function HomePage() {
     const [showPopup, setShowPopup] = useState(false);
     const [task, setTask] = useState("Random task");
     const [coins, setCoins] = useState(0);
+    const [index, setIndex] = useState(1);
+    const [roadmapItems, setRoadmapItems] = useState(roadmapItemsInitial);
 
     const close = () => {
         setShowPopup(false);
@@ -35,10 +37,27 @@ export default function HomePage() {
         setShowPopup(true);
     }
 
+    const increment = () => {
+        const type = roadmapItems[index].type;
+        console.log(type);
+        if (type === "current_0") {
+            roadmapItems[index].type = "current_25";
+        } else if (type === "current_25") {
+            roadmapItems[index].type = "current_50";
+        } else if (type === "current_50") {
+            roadmapItems[index].type = "current_75";
+        } else if (type === "current_75") {
+            roadmapItems[index].type = "finished"
+            roadmapItems[index+1].type = "current_0"
+            setIndex(index + 1);
+        }
+        setRoadmapItems(roadmapItems);
+    }
+
     return (
         <div style={{display: "flex", flexDirection:"column"}}>
             <Roadmap items={roadmapItems} open={open}/>
-            {showPopup && <CompleteTaskPopup task={task} coins={coins} close={close}/>}
+            {showPopup && <CompleteTaskPopup increment={increment} task={task} coins={coins} close={close}/>}
             <HomeFooter />
         </div>
     );

@@ -37,6 +37,9 @@ const Node = ({ type, task, coins, open }) => {
         }
     }
 
+    const close = () => {
+        setPopupVisible(false);
+    }
 
     return (
         <div>
@@ -48,7 +51,7 @@ const Node = ({ type, task, coins, open }) => {
                 src={imageSrc}
                 alt={type}
             />
-            {popupVisible && <NodePopup task={task} coins={coins} open={open}/>}
+            {popupVisible && <NodePopup task={task} coins={coins} open={open} close={close}/>}
         </div>
 
     )

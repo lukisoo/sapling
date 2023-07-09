@@ -1,7 +1,7 @@
 import React from 'react';
 
 const CompleteTaskPopup = (props) => {
-    const {task, coins, close} = props;
+    const {task, coins, close, increment} = props;
 
     const closePopup = () => {
         close();
@@ -9,6 +9,7 @@ const CompleteTaskPopup = (props) => {
 
   const toggleConfirm = () => {
       console.log("CONFIRMED");
+      increment();
       close()
   };
 
