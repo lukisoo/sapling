@@ -27,7 +27,7 @@ export default function FriendsPage() {
     
   const tempLeaderboard = [
     {
-      rank:'', icon: person, username:'mouyag2001', name:'Matthew Ouyang', xp:'900', userid:'1', backgroundColor: '#F0FFF0'
+      rank:'', icon: person, username:'mouyang2001', name:'Matthew Ouyang', xp:'900', userid:'1', backgroundColor: '#F0FFF0'
     },
     {
       rank:'', icon: person, username:'ylei532', name:'Youxiang Lei', xp:'700', userid:'2', backgroundColor: '#F0FFF0'
