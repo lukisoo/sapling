@@ -48,7 +48,7 @@ export default function FriendsPage() {
 
   if (selected === '') {
     console.log('here')
-    renderedPreview = null
+    renderedPreview = Preview1
   } else if (selected === '1') {
     console.log('here!')
     renderedPreview = Preview1 

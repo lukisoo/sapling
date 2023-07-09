@@ -37,22 +37,22 @@ export default function ProfilePage() {
     
     const tempLeaderboard = [
       {
-        rank:'1', icon: person, username:'mouyag2001', name:'Matthew Ouyang', xp:'900', userid:'1', backgroundColor: '#F0FFF0'
+        rank:'1', icon: person, username:'mouyag2001', name:'Matthew Ouyang', xp:'900', userid:'1', backgroundColor: '#E9FFE9'
       },
       {
-        rank:'2', icon: person, username:'ylei532', name:'Youxiang Lei', xp:'700', userid:'2', backgroundColor: '#F0FFF0'
+        rank:'2', icon: person, username:'ylei532', name:'Youxiang Lei', xp:'700', userid:'2', backgroundColor: '#E9FFE9'
       },
       {
         rank:'3', icon: person, username:'whoreytorrey', name:'Daniel Torrey', xp:'500', userid:'3', backgroundColor: '#A2D39D'
       },
       {
-        rank:'4', icon: person, username:'nroh555', name:'Naren Rohan', xp:'500', userid:'4', backgroundColor: '#F0FFF0'
+        rank:'4', icon: person, username:'nroh555', name:'Naren Rohan', xp:'500', userid:'4', backgroundColor: '#E9FFE9'
       },
       {
-        rank:'5', icon: person, username:'lukisoo', name:'Lucy Zhu', xp:'400', userid:'5', backgroundColor: '#F0FFF0'
+        rank:'5', icon: person, username:'lukisoo', name:'Lucy Zhu', xp:'400', userid:'5', backgroundColor: '#E9FFE9'
       },
       {
-        rank:'6', icon: person, username:'zoemlt', name:'Zoe Niu', xp:'300', userid:'6', backgroundColor: '#F0FFF0'
+        rank:'6', icon: person, username:'zoemlt', name:'Zoe Niu', xp:'300', userid:'6', backgroundColor: '#E9FFE9'
       }
     ]
 
@@ -85,16 +85,23 @@ export default function ProfilePage() {
 
       <div id='leaderboard'> 
           <div id='leaderboard-image'>
-              <img src={wood}/>
-              <img src={rock}/>
-              <img src={dirt}/>
-              <img src={lock}/>
-              <img src={lock}/>
+              <img src={wood} style={{width: '80px', marginLeft: '0px'}}/>
+              <img src={rock} style={{width: '80px', paddingBottom: '15px', marginLeft: '10px'}}/>
+              <img src={dirt} style={{width: '120px', marginLeft: '10px'}}/>
+              <img src={lock} style={{width: '60px', paddingBottom: '15px', marginLeft: '20px'}}/>
+              <img src={lock} style={{width: '60px', paddingBottom: '15px', marginLeft: '20px'}}/>
           </div>
+
+          <h2 style={{marginLeft: '10px', marginTop: '-10px', justifyContent: 'center', color:'#613E34'}}>Sprout League</h2>
           <div id="leaderboard-text"> 
             <h1>Leaderboard</h1>
+            <br></br>
+            <h3 style={{marginTop: '-40px'}}>Top 5 advance to next league</h3>
+            <p style={{marginTop: '-15px'}}>Resets monthly</p>
           </div>
-          {renderedLeaderboard}
+          <div id='leaderboard-players'>
+            {renderedLeaderboard}
+          </div>
       </div>
     </div>
     );
