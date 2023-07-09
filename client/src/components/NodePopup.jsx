@@ -5,7 +5,7 @@ const NodePopup = (props) => {
 
     const complete = () => {
       console.log("Modal Popup")
-        open();
+        open(task, coins);
     }
 
     return (
