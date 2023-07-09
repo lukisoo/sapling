@@ -1,33 +1,37 @@
 import React from 'react';
+import Node from "./Node.jsx";
+import styled from "styled-components";
 
-const Roadmap = () => {
+const RoadmapContainer = styled.div`
+    display: flex;
+    gap: 60px;
+    overflow-x: auto;
+    padding: 40px;
+    height: 400px;
+`;
+
+const NodeWrapper = styled.div`
+    transform: ${props => `translateY(${props.move}px)`};
+    transition: transform 0.3s ease-out;
+`;
+
+const Roadmap = (props) => {
+    const {items} = props;
+    const amplitude = 100;
+    const period = items.length / (4 * Math.PI);
+    const phaseOffset = Math.PI / 4;
 
   return (
-    <div style={{ width: '100%', overflow: 'auto' }}>
-    <div style={{ width: '200%' }}>
-        <div style={{ position: 'absolute', left: '100px', top: '300px' }}>
-            <img src="node_finished.svg" alt="Node 1" />
-        </div>
-        <div style={{ position: 'absolute', left: '400px', top: '200px' }}>
-            <img src="node_current.svg" alt="Node 2" />
-        </div>
-        <div style={{ position: 'absolute', left: '700px', top: '300px' }}>
-            <img src="node_future.svg" alt="Node 3" />
-        </div>
-        <div style={{ position: 'absolute', left: '1000px', top: '400px' }}>
-            <img src="node_future.svg" alt="Node 4" />
-        </div>
-        <div style={{ position: 'absolute', left: '1300px', top: '500px' }}>
-            <img src="node_future.svg" alt="Node 5" />
-        </div>
-        <div style={{ position: 'absolute', left: '1600px', top: '400px' }}>
-            <img src="node_future.svg" alt="Node 6" />
-        </div>
-        <div style={{ position: 'absolute', left: '1900px', top: '300px' }}>
-            <img src="node_future.svg" alt="Node 6" />
-        </div>
-    </div>
-    </div>
+      <RoadmapContainer>
+          {items.map((item, index) => {
+              const verticalPosition = amplitude * (Math.sin(index / period) + phaseOffset);
+              return (
+                  <NodeWrapper key={index} move={verticalPosition}>
+                      <Node type={item.type} onClick={() => console.log("hello world")} />
+                  </NodeWrapper>
+              );
+          })}
+      </RoadmapContainer>
   );
 };
 
