@@ -20,7 +20,9 @@ const HomeFooter = () => {
             zIndex: 5
           }}
         >   
-
+            <div>
+                <img src="footer_garden.svg" style={{ left:'-15%', position:'fixed', bottom:'-22%', height:'50%' }} />
+            </div>
             <div style={{ position: 'absolute', marginRight: '10%' }}>
 
               <a href='/garden' style={{ border: 'none', backgroundColor: 'transparent', cursor: 'pointer' }}>
