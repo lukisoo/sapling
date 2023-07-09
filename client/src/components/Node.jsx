@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import { motion } from "framer-motion";
 import NodePopup from "./NodePopup.jsx";
 
-const Node = ({ type, task, coins }) => {
+const Node = ({ type, task, coins, open }) => {
     let imageSrc = "";
 
     const [popupVisible, setPopupVisible] = useState(false);
@@ -43,11 +43,12 @@ const Node = ({ type, task, coins }) => {
             <motion.img
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
+                style={{height:"100px", width: "auto"}}
                 onClick={handleClick}
                 src={imageSrc}
                 alt={type}
             />
-            {popupVisible && <NodePopup task={task} coins={coins} />}
+            {popupVisible && <NodePopup task={task} coins={coins} open={open}/>}
         </div>
 
     )
