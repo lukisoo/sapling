@@ -1,14 +1,18 @@
-import React from 'react';
+import Axios from 'axios';
 
 const CompleteTaskPopup = (props) => {
-    const {task, coins, close} = props;
+    const {task, coins, close, increment} = props;
 
     const closePopup = () => {
         close();
     }
 
   const toggleConfirm = () => {
+    Axios.post("http://localhost:3000/slack-submit").then((response) => {
+      alert("Slack Message Sent")
+    })
       console.log("CONFIRMED");
+      increment();
       close()
   };
 
