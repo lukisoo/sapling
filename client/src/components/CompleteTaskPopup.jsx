@@ -1,4 +1,5 @@
 import Axios from 'axios';
+import "./CompleteTaskPopup.css";
 
 const CompleteTaskPopup = (props) => {
     const {task, coins, close, increment} = props;
