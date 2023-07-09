@@ -17,7 +17,7 @@ const LeaderboardBox = ({username, name, xp, icon, rank, userid, backgroundColor
             <h1 style={{width:'190px'}}>{name}</h1>
             <h3>{xp} XP</h3>
         </div>
-        <Link to={`/edit/${userid}`}><button>VIEW</button></Link>
+        <button>VIEW</button>
         
     </div>
   );
