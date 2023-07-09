@@ -4,16 +4,13 @@ import dirt from "../assets/dirt.svg";
 import lock from "../assets/lock.png";
 import garden from "../assets/MatthewGarden.svg"
 
-const Profile1 = () => {
+const Garden1 = () => {
     return (
         <div>       
-            <RankBadge icon={dirt} nextIcon={lock} league='Sprout League'/>
-            <div id='garden-image'>
-                <img src={garden}/>
-            </div>
+          Garden1
         </div>
 
     )
 }
 
-export default Profile1;
+export default Garden1;
