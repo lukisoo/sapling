@@ -12,7 +12,7 @@ nav {
 nav div:first-child {
     display: flex;
     align-items: center; /* Centers content vertically */
-    gap: 10px;
+    gap: 20px;
 }
 
 nav div:first-child a {
@@ -37,12 +37,6 @@ nav div:last-child {
     align-items: center;
 }
 
-nav div:last-child img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-
 nav div:last-child span {
     font-size: 1.2em;
     margin-left: 10px;
@@ -51,3 +45,32 @@ nav div:last-child span {
 .navbar-logo {
     height: 50px;
 }
+
+.navbar-profile {
+    height: 40px;
+}
+
+.navbar-profile:hover {
+    opacity: 80%;
+    cursor: pointer;
+
+}
+
+.settings {
+    margin-left: 10px;
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+    padding-bottom: 8px;
+}
+
+.settings:hover {
+    opacity: 80%;
+    cursor: pointer;
+
+}
+
+/* 
+.navbar-item {
+    margin: 0 50px;
+} */
