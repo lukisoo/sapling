@@ -12,6 +12,7 @@ import rock from "../assets/rock.svg"
 import lock from "../assets/lock.svg"
 import wood from "../assets/wood.svg"
 import person from "../assets/person.svg"
+import Leaderboard from "../assets/leaderboard.svg";
 
 import ProfileHeading from "../assets/profile-heading.svg";
 
@@ -79,7 +80,7 @@ export default function ProfilePage() {
             <h2>Joined April 2023</h2>
         </div> */}
 
-        <div style={{marginLeft: "%"}} id='user-information'>
+        <div style={{marginLeft: "2.5%"}} id='user-information'>
             <h1>Statistics</h1>
             <div id='user-statistics'>
                 {renderedStatisticsList}
@@ -88,23 +89,24 @@ export default function ProfilePage() {
       </div>
 
       <div id='leaderboard'> 
-          <div id='leaderboard-image'>
+          {/* <div id='leaderboard-image'>
               <img src={wood} style={{width: '80px', marginLeft: '0px'}}/>
               <img src={rock} style={{width: '80px', paddingBottom: '15px', marginLeft: '10px'}}/>
               <img src={dirt} style={{width: '120px', marginLeft: '10px'}}/>
               <img src={lock} style={{width: '60px', paddingBottom: '15px', marginLeft: '20px'}}/>
               <img src={lock} style={{width: '60px', paddingBottom: '15px', marginLeft: '20px'}}/>
-          </div>
+          </div> */}
 
-          <h2 style={{marginLeft: '10px', marginTop: '-10px', justifyContent: 'center', color:'#613E34'}}>Sprout League</h2>
+          {/* <h2 style={{marginLeft: '10px', marginTop: '-10px', justifyContent: 'center', color:'#613E34'}}>Sprout League</h2> */}
           <div id="leaderboard-text"> 
-            <h1>Leaderboard</h1>
-            <br></br>
+            {/* <h1>Leaderboard</h1>
+            <br></br><br></br>
             <h3 style={{marginTop: '-40px'}}>Top 5 advance to next league</h3>
-            <p style={{marginTop: '-15px'}}>Resets monthly</p>
+            <p style={{marginTop: '-15px'}}>Resets monthly</p> */}
           </div>
           <div id='leaderboard-players'>
-            {renderedLeaderboard}
+            <img src={Leaderboard}/>
+            {/* {renderedLeaderboard} */}
           </div>
       </div>
     </div>
