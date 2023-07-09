@@ -6,6 +6,7 @@ import LeaderboardPage from './pages/LeaderboardPage';
 import ProfilePage from './pages/ProfilePage';
 import Navbar from './components/Navbar';
 import FriendsPage from './pages/FriendsPage';
+import Profile1 from './components/Profile1';
 
 function App() {
   const appStyle = {
@@ -23,6 +24,8 @@ function App() {
           <Route path="/profile" element={<ProfilePage />}/>
           <Route path="/leaderboard" element={<LeaderboardPage />}/>
           <Route path="/friends" element={<FriendsPage />}/>
+          <Route path="/edit/1" element={<Profile1/>}/>
+          
       </Routes>
     </div>
   )
