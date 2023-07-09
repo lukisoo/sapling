@@ -146,7 +146,7 @@ export default function GardenPage() {
         // console.log("firsthalf");
         // console.log(firstHalf);
         const secondHalf = firstHalf.concat(
-          currentIslandDisplay.slice(index + 1, 25)
+          currentIslandDisplay.slice(index + 1, 26)
         );
         // console.log("secondhalf)");
         // console.log(secondHalf);
@@ -344,11 +344,7 @@ export default function GardenPage() {
                 <div id="1" className="grid-box placeholder"></div>
                 <div id="1" className="grid-box placeholder"></div>
 
-                <motion.div
-      initial={{ opacity: 0, y: 200 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
+                
                 <div
                   id="0"
                   onClick={() => {
@@ -357,7 +353,7 @@ export default function GardenPage() {
                   className="grid-box valid"
                 >
                   <img className="grid-icon" src={currentIslandDisplay[0]} />
-                </div></motion.div>
+                </div>
                 <div
                   id="1"
                   onClick={() => {
