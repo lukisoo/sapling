@@ -27,7 +27,7 @@ const Roadmap = (props) => {
               const verticalPosition = amplitude * (Math.sin(index / period) + phaseOffset);
               return (
                   <NodeWrapper key={index} move={verticalPosition}>
-                      <Node type={item.type} onClick={() => console.log("hello world")} />
+                      <Node type={item.type} task={item.task} coins={item.coins}/>
                   </NodeWrapper>
               );
           })}
