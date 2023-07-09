@@ -43,7 +43,12 @@ export default function FriendsPage() {
     }
   ]
 
-  console.log('from friend page:', selected)
+
+    //const renderedStatisticsList = statistics.map((statistic, index) => {
+        //return <StatisticsBox style={{marginLeft: "2%"}} key={index} name={statistic.name} number={statistic.number} imageSrc={statistic.image} color={statistic.color}/>
+    //});
+  
+  //console.log('from friend page:', selected)
   
 
   if (selected === '') {
@@ -68,7 +73,6 @@ export default function FriendsPage() {
   else {
     renderedPreview = null
   }
-  
 
     const renderedLeaderboard = tempLeaderboard.map((record, index) => {
       return <LeaderboardBox key={index} 
