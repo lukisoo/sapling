@@ -39,12 +39,12 @@ const CompleteTaskPopup = (props) => {
             
           <h2>{task}</h2>
           <p>+{coins} coins</p>
-            <img src="task_popup_tick.svg" style={{ width: '20%', height: '20%' }} />
-            <img src="task_popup_emptytick.svg" style={{ width: '20%', height: '20%' }} />
+          <input type="checkbox" />
+          <input type="checkbox" checked="checked"/>
             <button onClick={toggleConfirm} style={{ border: 'none', backgroundColor: 'transparent', cursor: 'pointer' }}>
                 <img src="task_popup_confirm.svg" style={{ width: '95%', height: '95%' }} />
             </button>
-            <button onClick={closePopup} style={{ border: 'none', backgroundColor: 'transparent', cursor: 'pointer' }}>
+            <button onClick={closePopup} style={{ right: "60px", position: "relative", border: 'none', backgroundColor: 'transparent', cursor: 'pointer' }}>
                 <img src="task_popup_close.svg" style={{ width: '80%', height: '80%' }} />
             </button>
             <p>
