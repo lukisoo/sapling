@@ -12,7 +12,7 @@ app.get('/', (req,res) => {
     res.send("It's working")
 })
 
-app.post('/', (req, res) => {
+app.post('/slack-submit', (req, res) => {
 	axios
 		.post('https://hooks.slack.com/services/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', {
 			blocks: [
@@ -20,7 +20,7 @@ app.post('/', (req, res) => {
 					type: 'section',
 					text: {
 						type: 'mrkdwn',
-						text: `Hello`,
+						text: "Congratulations on finishing your task!",
 					},
 				},
 			],
