@@ -8,8 +8,20 @@ const Node = ({ type, task, coins }) => {
     const [popupVisible, setPopupVisible] = useState(false);
 
     switch (type) {
-        case "current":
-            imageSrc = "node_current.svg";
+        case "current_0":
+            imageSrc = "node_current_0.svg";
+            break;
+        case "current_25":
+            imageSrc = "node_current_25.svg";
+            break;
+        case "current_50":
+            imageSrc = "node_current_50.svg";
+            break;
+        case "current_75":
+            imageSrc = "node_current_75.svg";
+            break;
+        case "current_100":
+            imageSrc = "node_current_100.svg";
             break;
         case "finished":
             imageSrc = "node_finished.svg";
