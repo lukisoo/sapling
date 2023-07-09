@@ -1,5 +1,6 @@
 import React from "react";
 import "./GardenPage.css";
+import data from '../database/data.json';
 
 //components are fake
 import RoadmapButton from "../assets/return-to-roadmap-button.png";
@@ -34,51 +35,56 @@ import PineTreeListing from "../assets/shop-listings/pine-tree.png";
 import TreehouseListing from "../assets/shop-listings/treehouse.png";
 import CurvingTreeListing from "../assets/shop-listings/curving-tree.png";
 
-// import {
-//   RecoilRoot,
-//   atom,
-//   selector,
-//   useRecoilState,
-//   useRecoilValue,
-// } from "recoil";
+import {
+  RecoilRoot,
+  atom,
+  selector,
+  useRecoilState,
+  useRecoilValue,
+} from "recoil";
 import { useState } from "react";
 
 import { currentIslandState } from "../../atoms/currentIslandState";
+import { currentCoinsState } from "../../atoms/currentCoinsState";
+
 
 import { NavLink } from "react-router-dom";
 // import Xx from "../assets/dirt.svg"
 
 export default function GardenPage() {
-  //   const [currentIslandDisplay, setCurrentIslandDisplay] =
-  //     useRecoilState(currentIslandState);
+    const [currentIslandDisplay, setCurrentIslandDisplay] =
+      useRecoilState(currentIslandState);
 
-  const [currentIslandDisplay, setCurrentIslandDisplay] = useState([
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-  ]);
+    const [currentCoins, setCurrentCoins] =
+      useRecoilState(currentCoinsState);
 
-  const [currentCoins, setCurrentCoins] = useState(1000);
+  // const [currentIslandDisplay, setCurrentIslandDisplay] = useState([
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  // ]);
+
+  // const [currentCoins, setCurrentCoins] = useState(1000);
 
   const [currentPlant, setCurrentPlant] = useState("");
 
@@ -159,6 +165,7 @@ export default function GardenPage() {
 
           <div className="store-bg">
             <div className="shop-heading">
+              {/* <p>{data}</p> */}
               <h2 className="shop-title">Store</h2>
               <img className="coin" src={Coin} />
               <span className="coin-count"> {currentCoins}</span>

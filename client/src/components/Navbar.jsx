@@ -5,10 +5,23 @@ import "./Navbar.css";
 import NavbarProfile from "../assets/navbar-profile.png";
 import Settings from "../assets/settings.png";
 
+import { currentCoinsState } from "../../atoms/currentCoinsState";
+
+import {
+    RecoilRoot,
+    atom,
+    selector,
+    useRecoilState,
+    useRecoilValue,
+  } from "recoil";
+
+
 
 
 // Navbar Component
 const Navbar = () => {
+    const [currentCoins, setCurrentCoins] =
+      useRecoilState(currentCoinsState);
     return (
         <nav>
             <div>
@@ -20,6 +33,7 @@ const Navbar = () => {
             </div>
 
             <div>
+                <h3>coins: {currentCoins}</h3>
                 <NavLink to="/profile" className="navbar-item" activeClassName="active"><img className="navbar-profile" src={NavbarProfile} alt="User profile" /></NavLink>
                 <img className="settings" src={Settings} alt="Settings" />
 
