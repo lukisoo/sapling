@@ -4,6 +4,17 @@ import Roadmap from "../components/Roadmap";
 import CompleteTaskPopup from "../components/CompleteTaskPopup.jsx";
 import Confetti from "react-confetti";
 
+
+import { currentCoinsState } from "../../atoms/currentCoinsState";
+
+import {
+    RecoilRoot,
+    atom,
+    selector,
+    useRecoilState,
+    useRecoilValue,
+  } from "recoil";
+
 const activities = [
     "Grab coffee with Matthew",
     "Go on a 15 minute walk in Albert Park with John",
@@ -44,6 +55,9 @@ const roadmapItemsInitial = [
 
 export default function HomePage() {
 
+    const [currentCoins, setCurrentCoins] =
+    useRecoilState(currentCoinsState);
+
     const [showPopup, setShowPopup] = useState(false);
     const [task, setTask] = useState("Random task");
     const [coins, setCoins] = useState(0);
@@ -77,13 +91,20 @@ export default function HomePage() {
         }
 
         const randomIndex = Math.floor(Math.random() * activities.length);
-        const randomCoins = Math.floor(Math.random() * (700 - 200 + 1)) + 200;
+        //TODO: CHANGE THIS
+        const randomCoins = Math.floor(Math.random() * (400 - 100 + 1)) + 100;
         roadmapItems[index].task = activities[randomIndex];
         roadmapItems[index].coins = randomCoins;
 
         setRoadmapItems(roadmapItems);
 
+
+
         // TODO: LUCY INCREMENT COINS GLOBALLY AND STREAK
+
+        setCurrentCoins(currentCoins + randomCoins);
+
+
 
         setShowConfetti(true);
         setTimeout(() => {
