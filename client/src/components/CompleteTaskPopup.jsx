@@ -9,7 +9,7 @@ const CompleteTaskPopup = (props) => {
 
   const toggleConfirm = () => {
     Axios.post("http://localhost:3000/slack-submit").then((response) => {
-      alert("Slack Message Sent")
+      console.log("Slack messaged was sent")
     })
       console.log("CONFIRMED");
       increment();
