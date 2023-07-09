@@ -1,5 +1,6 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
+import { motion } from "framer-motion";
 
 const HomeFooter = () => {
 
@@ -16,18 +17,21 @@ const HomeFooter = () => {
             alignItems: 'center',
             justifyContent: 'flex-end',
             padding: '0 20px',
+            zIndex: 5
           }}
         >   
             <div>
-                <img src="footer_garden.svg" style={{ left:'-15%', position:'fixed', bottom:'-25%', height:'60%' }} />
+                <img src="footer_garden.svg" style={{ left:'-15%', position:'fixed', bottom:'-22%', height:'50%' }} />
             </div>
             <div style={{ position: 'absolute', marginRight: '10%' }}>
 
-            <NavLink to="/garden" activeClassName="active">
-            <button style={{ border: 'none', backgroundColor: 'transparent', cursor: 'pointer' }}>
-                        <img src="footer_visit.svg" alt="Button" style={{ width: '100%', height: '100%' }} />
-                    </button>
-          </NavLink>
+              <a href='/garden' style={{ border: 'none', backgroundColor: 'transparent', cursor: 'pointer' }}>
+                <motion.img
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                src={"footer_visit.svg"} 
+                />
+              </a>
 
             </div>
             <img src="footer_flowers.svg" alt="Footer Flowers" style={{ height: '120%', marginRight: '2%', marginTop: '-1%' }} />

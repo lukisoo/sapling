@@ -1,22 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const CompleteTaskPopup = (props) => {
-    const {task, coins} = props;
-  const [showPopup, setShowPopup] = useState(false);
+    const {task, coins, close} = props;
 
-  const togglePopup = () => {
-    setShowPopup(!showPopup);
-  };
+    const closePopup = () => {
+        close();
+    }
 
   const toggleConfirm = () => {
-    setShowPopup(!showPopup);
+      console.log("CONFIRMED");
+      close()
   };
 
   return (
     <div>
-      <button onClick={togglePopup}>Open Popup</button>
-
-      {showPopup && (
         <div
           style={{
             position: 'fixed',
@@ -42,7 +39,7 @@ const CompleteTaskPopup = (props) => {
             <button onClick={toggleConfirm} style={{ border: 'none', backgroundColor: 'transparent', cursor: 'pointer' }}>
                 <img src="task_popup_confirm.svg" style={{ width: '95%', height: '95%' }} />
             </button>
-            <button onClick={togglePopup} style={{ border: 'none', backgroundColor: 'transparent', cursor: 'pointer' }}>
+            <button onClick={closePopup} style={{ border: 'none', backgroundColor: 'transparent', cursor: 'pointer' }}>
                 <img src="task_popup_close.svg" style={{ width: '80%', height: '80%' }} />
             </button>
             <p>
@@ -50,21 +47,6 @@ const CompleteTaskPopup = (props) => {
                 Matthew
             </p>
         </div>
-      )}
-
-      {showPopup && (
-        <div
-          style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            width: '100vw',
-            height: '100vh',
-            background: 'rgba(0, 0, 0, 0.5)',
-            zIndex: 998,
-          }}
-        />
-      )}
     </div>
   );
 };

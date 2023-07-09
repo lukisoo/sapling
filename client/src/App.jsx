@@ -25,7 +25,6 @@ function App() {
           <Route path="/leaderboard" element={<LeaderboardPage />}/>
           <Route path="/friends" element={<FriendsPage />}/>
           <Route path="/edit/1" element={<Profile1/>}/>
-          
       </Routes>
     </div>
   )
