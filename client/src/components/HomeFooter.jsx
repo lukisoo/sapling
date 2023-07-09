@@ -21,7 +21,7 @@ const HomeFooter = () => {
           }}
         >   
             <div>
-                <img src="footer_garden.svg" style={{ left:'-15%', position:'fixed', bottom:'-25%', height:'60%' }} />
+                <img src="footer_garden.svg" style={{ left:'-15%', position:'fixed', bottom:'-22%', height:'50%' }} />
             </div>
             <div style={{ position: 'absolute', marginRight: '10%' }}>
 

@@ -31,6 +31,7 @@ const Node = ({ type, task, coins }) => {
             <motion.img
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
+                style={{height:"100px", width: "auto"}}
                 onClick={handleClick}
                 src={imageSrc}
                 alt={type}
