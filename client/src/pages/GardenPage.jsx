@@ -1,9 +1,11 @@
 import React from "react";
 import "./GardenPage.css";
+import data from '../database/data.json';
 
 //components are fake
 import RoadmapButton from "../assets/return-to-roadmap-button.png";
 import Coin from "../assets/coin.png";
+import { motion, AnimatePresence } from "framer-motion";
 
 import BirdTree from "../assets/plants/bird-tree.png";
 import FloweringTree from "../assets/plants/flowering-tree.png";
@@ -33,51 +35,56 @@ import PineTreeListing from "../assets/shop-listings/pine-tree.png";
 import TreehouseListing from "../assets/shop-listings/treehouse.png";
 import CurvingTreeListing from "../assets/shop-listings/curving-tree.png";
 
-// import {
-//   RecoilRoot,
-//   atom,
-//   selector,
-//   useRecoilState,
-//   useRecoilValue,
-// } from "recoil";
+import {
+  RecoilRoot,
+  atom,
+  selector,
+  useRecoilState,
+  useRecoilValue,
+} from "recoil";
 import { useState } from "react";
 
 import { currentIslandState } from "../../atoms/currentIslandState";
+import { currentCoinsState } from "../../atoms/currentCoinsState";
+
 
 import { NavLink } from "react-router-dom";
 // import Xx from "../assets/dirt.svg"
 
 export default function GardenPage() {
-  //   const [currentIslandDisplay, setCurrentIslandDisplay] =
-  //     useRecoilState(currentIslandState);
+    const [currentIslandDisplay, setCurrentIslandDisplay] =
+      useRecoilState(currentIslandState);
 
-  const [currentIslandDisplay, setCurrentIslandDisplay] = useState([
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-  ]);
+    const [currentCoins, setCurrentCoins] =
+      useRecoilState(currentCoinsState);
 
-  const [currentCoins, setCurrentCoins] = useState(1000);
+  // const [currentIslandDisplay, setCurrentIslandDisplay] = useState([
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  //   "",
+  // ]);
+
+  // const [currentCoins, setCurrentCoins] = useState(1000);
 
   const [currentPlant, setCurrentPlant] = useState("");
 
@@ -112,7 +119,7 @@ export default function GardenPage() {
 
       if (currentIslandDisplay[index] != "") {
         // Check if a plant is already there
-        setCurrentStatusMessage("There's already a plant there, try again.");
+        setCurrentStatusMessage("There's already a plant there, try somewhere.");
       } else {
         // Update the plant onto said position
         // console.log(currentIslandDisplay, currentPlant);
@@ -158,6 +165,7 @@ export default function GardenPage() {
 
           <div className="store-bg">
             <div className="shop-heading">
+              {/* <p>{data}</p> */}
               <h2 className="shop-title">Store</h2>
               <img className="coin" src={Coin} />
               <span className="coin-count"> {currentCoins}</span>
@@ -275,9 +283,20 @@ export default function GardenPage() {
         </div>
 
         <div className="right">
+        <motion.div
+          drag
+          dragConstraints={{
+            top: -0,
+            left: -0,
+            right: 0,
+            bottom: 0,
+          }}
+        >
+
           <div className="island-container">
             {/* <img className="island" src={IslandBg} /> */}
             <div className="island-overlay">
+            <AnimatePresence>
               <div class="grid-container">
                 <div id="1" className="grid-box placeholder">
                   {currentIslandDisplay[0]}
@@ -286,6 +305,11 @@ export default function GardenPage() {
                 <div id="1" className="grid-box placeholder"></div>
                 <div id="1" className="grid-box placeholder"></div>
 
+                <motion.div
+      initial={{ opacity: 0, y: 200 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
                 <div
                   id="0"
                   onClick={() => {
@@ -294,7 +318,7 @@ export default function GardenPage() {
                   className="grid-box valid"
                 >
                   <img className="grid-icon" src={currentIslandDisplay[0]} />
-                </div>
+                </div></motion.div>
                 <div
                   id="1"
                   onClick={() => {
@@ -550,13 +574,18 @@ export default function GardenPage() {
                 <div id="1" className="grid-box placeholder"></div>
                 <div id="1" className="grid-box placeholder"></div>
               </div>
+              </AnimatePresence>
             </div>
           </div>
+
+
+          </motion.div>
 
           <div className="info-bg">
             <h2>{currentStatusMessage}</h2>
           </div>
         </div>
+        
       </div>
     </>
   );

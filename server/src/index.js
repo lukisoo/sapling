@@ -1,9 +1,9 @@
-const express = require('express')
-const axios = require('axios')
-const app = express()
-const cors = require('cors')
+import express from "express";
+import axios from 'axios'
+import cors from 'cors'
 const port = 3000
 
+const app = express()
 app.use(express.urlencoded({extended: false}))
 app.use(express.json());
 app.use(cors())
@@ -20,7 +20,7 @@ app.post('/', (req, res) => {
 					type: 'section',
 					text: {
 						type: 'mrkdwn',
-						text: `Task: *${req.body.task}*`,
+						text: `Hello`,
 					},
 				},
 			],
@@ -33,8 +33,8 @@ app.post('/', (req, res) => {
 		})
 })
 
-app.listen(3000, () => {
-	console.log('Example app listening on port 3000!')
+app.listen(port, () => {
+	console.log(`Example app listening on port ${port}`)
 })
 
 
