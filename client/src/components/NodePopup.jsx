@@ -1,33 +1,33 @@
 import React from "react";
 
 const NodePopup = (props) => {
-    const {task, coins, open, close} = props;
+  const { task, coins, open, close } = props;
 
-    const complete = () => {
-      console.log("Modal Popup")
-        open(task, coins);
-      close();
-    }
+  const complete = () => {
+    console.log("Modal Popup");
+    open(task, coins);
+    close();
+  };
 
   return (
     <div
       style={{
-        backgroundColor: "purple",
-        position: "relative", 
-        right: "78px",
+        // backgroundColor: "purple",
+        position: "relative",
+        right: "55px",
         display: "inline-block",
         paddingBottom: "10px",
         height: "150px",
-        width: "250%",
+        width: "200%",
         fontSize: "0.1em",
       }}
     >
       <img src="node_popup.svg" style={{ width: "100%" }} />
       <p
         style={{
-            marginTop: "30px",
-            width: "80%",
-            backgroundColor: "blue",
+          marginTop: "25px",
+          width: "80%",
+          // backgroundColor: "blue",
           position: "absolute",
           top: "30%",
           left: "50%",
@@ -47,14 +47,14 @@ const NodePopup = (props) => {
       <button
         style={{
           position: "absolute",
-          bottom: "25px",
+          bottom: "35px",
           left: "50%",
           transform: "translateX(-50%)",
           border: "none",
           backgroundColor: "transparent",
           cursor: "pointer",
           width: "80%",
-        //   paddingBottom: "px",
+          //   paddingBottom: "px",
         }}
         onClick={complete}
       >

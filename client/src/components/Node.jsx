@@ -44,6 +44,7 @@ const Node = ({ type, task, coins, open }) => {
     return (
         <div>
             <motion.img
+            className="add-hover"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 style={{height:"90px", width: "auto"}}
