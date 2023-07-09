@@ -1,12 +1,13 @@
 import React from "react";
 
 const NodePopup = (props) => {
-  const { task, coins, open } = props;
+    const {task, coins, open, close} = props;
 
-  const complete = () => {
-    console.log("Modal Popup");
-    open(task, coins);
-  };
+    const complete = () => {
+      console.log("Modal Popup")
+        open(task, coins);
+      close();
+    }
 
   return (
     <div
