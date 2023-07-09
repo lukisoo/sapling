@@ -9,6 +9,7 @@ const RoadmapContainer = styled.div`
     margin-top: 40px;
     padding: 40px;
     height: 500px;
+    overflow-y: hidden;
 `;
 
 const NodeWrapper = styled.div`
