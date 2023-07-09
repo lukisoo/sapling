@@ -12,61 +12,85 @@ import rock from "../assets/rock.svg"
 import lock from "../assets/lock.png"
 import wood from "../assets/wood.svg"
 import person from "../assets/person.svg"
+import Garden1 from "../components/Garden1";
+import Preview1 from "../assets/GardenPreview1.svg";
+import Preview2 from "../assets/GardenPreview2svg.svg";
+import Preview4 from "../assets/GardenPreview3.svg";
+import Preview5 from "../assets/GardenPreview5.svg";
+import Preview6 from "../assets/GardenPreview6.svg";
+import { useState } from "react";
 
 export default function FriendsPage() {
-    const statistics = [{
-        number: '36', name: 'Day Streak', image: fire, color: '#FF9600'
-      },
-      {
-        number: '8140', name: 'Total XP', image: lightning, color: '#FFC927'
-      },
-      {
-        number: '129', name: 'Tasks Completed', image: task, color: '#F45858'
-      },
-      {
-        number: '49', name: 'Co-worker Interaction', image: handshake, color: '#6AACDA'
-      },
-      {
-        number: '23', name: 'Plants Placed', image: plant, color: '#98CD64'
-      },
-      {
-        number: '3', name: 'Top 3 Finishes', image: trophy, color: '#CC8F01'
-    }];
 
+  const [selected, setSelected] = useState('')
+  let renderedPreview = null;
     
-    const tempLeaderboard = [
-      {
-        rank:"", icon: person, username:'mouyang2001', name:'Matthew Ouyang', xp:'900', userid:'1243'
-      },
-      {
-        rank:"", icon: person, username:'mouyag2001', name:'Matthew Ouyang', xp:'900', userid:'123'
-      },
-      {
-        rank:"", icon: person, username:'mouyag2001', name:'Matthew Ouyang', xp:'900', userid:'123'
-      },
-      {
-        rank:"", icon: person, username:'mouyag2001', name:'Matthew Ouyang', xp:'900', userid:'123'
-      },
-      {
-        rank:"", icon: person, username:'mouyag2001', name:'Matthew Ouyang', xp:'900', userid:'123'
-      }
-    ]
+  const tempLeaderboard = [
+    {
+      rank:'', icon: person, username:'mouyag2001', name:'Matthew Ouyang', xp:'900', userid:'1', backgroundColor: '#F0FFF0'
+    },
+    {
+      rank:'', icon: person, username:'ylei532', name:'Youxiang Lei', xp:'700', userid:'2', backgroundColor: '#F0FFF0'
+    },
+    {
+      rank:'', icon: person, username:'nroh555', name:'Naren Rohan', xp:'500', userid:'4', backgroundColor: '#F0FFF0'
+    },
+    {
+      rank:'', icon: person, username:'lukisoo', name:'Lucy Zhu', xp:'400', userid:'5', backgroundColor: '#F0FFF0'
+    },
+    {
+      rank:'', icon: person, username:'zoemlt', name:'Zoe Niu', xp:'300', userid:'6', backgroundColor: '#F0FFF0'
+    }
+  ]
 
-    const renderedStatisticsList = statistics.map((statistic, index) => {
-        return <StatisticsBox key={index} name={statistic.name} number={statistic.number} imageSrc={statistic.image} color={statistic.color}/>
-    });
+  console.log('from friend page:', selected)
+  
+
+  if (selected === '') {
+    console.log('here')
+    renderedPreview = null
+  } else if (selected === '1') {
+    console.log('here!')
+    renderedPreview = Preview1 
+  } else if (selected === '2') {
+    console.log('here!!')
+    renderedPreview = Preview2
+  } else if (selected === '4') {
+    console.log('here!!')
+    renderedPreview = Preview4
+  } else if (selected === '5') {
+    console.log('here!!')
+    renderedPreview = Preview5
+  } else if (selected === '6') {
+    console.log('here!!')
+    renderedPreview = Preview6
+  }
+  else {
+    renderedPreview = null
+  }
+  
 
     const renderedLeaderboard = tempLeaderboard.map((record, index) => {
-      return <LeaderboardBox key={index} rank={record.rank} icon={record.icon} username={record.username} name={record.name} xp={record.xp} userid={record.userid}/>
+      return <LeaderboardBox key={index} 
+      rank={record.rank} 
+      icon={record.icon} 
+      username={record.username} 
+      name={record.name} 
+      xp={record.xp} 
+      userid={record.userid}
+      onSelect={setSelected}/>
     })
-    return <div>
+    return <div id='friends-page'>
         
       <div id='friends'> 
           <div id="friends-text"> 
             <h1>Friends</h1>
           </div>
-          <LeaderboardBox rank='' icon={person} username='mouyag2001' name='Matthew Ouyang' xp='900'userid='123'/>
           {renderedLeaderboard}
+      </div>
+
+      <div id='garden-preview'>
+        <img src={renderedPreview}/>
       </div>
 
     </div>;
