@@ -21,8 +21,8 @@ const HomeFooter = () => {
           }}
         >   
             <div>
-                <img src="flower2.svg" style={{ left:'52%', position:'fixed', bottom:'0%', height:'15%' }} />
-                <img src="flower2.svg" style={{ left:'30%', position:'fixed', bottom:'10%', height:'15%' }} />
+                <img src="flower2.svg" style={{ left:'52%', position:'fixed', bottom:'0%', height:'13%' }} />
+                <img src="flower2.svg" style={{ left:'30%', position:'fixed', bottom:'7%', height:'10%' }} />
             </div>
             <div>
                 <img src="grass.svg" style={{ left:'40%', position:'fixed', bottom:'-2%', height:'10%' }} />
