@@ -20,6 +20,9 @@ import Daisies from "../assets/plants/daisies.png";
 import PineTree from "../assets/plants/pine-tree.png";
 import Treehouse from "../assets/plants/treehouse.png";
 import CurvingTree from "../assets/plants/curving-tree.png";
+import Dog from "../assets/plants/dog.png";
+import Fish from "../assets/plants/fish.png";
+import Grass from "../assets/plants/grass.png";
 
 import BirdTreeListing from "../assets/shop-listings/bird-tree.png";
 import FloweringTreeListing from "../assets/shop-listings/flowering-tree.png";
@@ -34,6 +37,10 @@ import DaisiesListing from "../assets/shop-listings/daisies.png";
 import PineTreeListing from "../assets/shop-listings/pine-tree.png";
 import TreehouseListing from "../assets/shop-listings/treehouse.png";
 import CurvingTreeListing from "../assets/shop-listings/curving-tree.png";
+import DogListing from "../assets/shop-listings/dog.png";
+import FishListing from "../assets/shop-listings/fish.png";
+import GrassListing from "../assets/shop-listings/grass.png";
+
 
 import {
   RecoilRoot,
@@ -175,6 +182,13 @@ export default function GardenPage() {
               <div className="shop-listings">
                 <img
                   onClick={() => {
+                    handlePurchase(Grass, 100);
+                  }}
+                  className="listing"
+                  src={GrassListing}
+                />
+                <img
+                  onClick={() => {
                     handlePurchase(PurpleProfusion, 200);
                   }}
                   className="listing"
@@ -263,6 +277,20 @@ export default function GardenPage() {
                   }}
                   className="listing"
                   src={BirdTreeListing}
+                />
+                <img
+                  onClick={() => {
+                    handlePurchase(Dog, 800);
+                  }}
+                  className="listing"
+                  src={DogListing}
+                />
+                <img
+                  onClick={() => {
+                    handlePurchase(Fish, 800);
+                  }}
+                  className="listing"
+                  src={FishListing}
                 />
               </div>
             ) : (
