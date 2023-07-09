@@ -24,7 +24,7 @@ const NodePopup = (props) => {
         
         <br />
         <div style={{fontSize:20, paddingBottom: '40px'}}>
-          {coins}
+          +{coins} coins
         </div>
       </p>
       <a href={"/task"}>
