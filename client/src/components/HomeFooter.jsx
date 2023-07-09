@@ -8,7 +8,7 @@ const HomeFooter = () => {
         <div
           style={{
             backgroundColor: '#AFD951',
-            height: '20%',
+            height: '15%',
             width: '100%',
             position: 'fixed',
             left: 0,
@@ -21,11 +21,11 @@ const HomeFooter = () => {
           }}
         >   
             <div>
-                <img src="footer_garden.svg" style={{ left:'-15%', position:'fixed', bottom:'-22%', height:'50%' }} />
+                <img src="footer_garden.svg" style={{ left:'-10%', position:'fixed', bottom:'-26%', height:'50%' }} />
             </div>
-            <div style={{ position: 'absolute', marginRight: '10%' }}>
+            <div style={{ position: 'absolute', marginRight: '4%' }}>
 
-              <a href='/garden' style={{ border: 'none', backgroundColor: 'transparent', cursor: 'pointer' }}>
+              <a href='/garden' style={{ width: "50%", border: 'none', backgroundColor: 'transparent', cursor: 'pointer' }}>
                 <motion.img
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}

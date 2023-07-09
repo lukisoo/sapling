@@ -8,8 +8,8 @@ const RoadmapContainer = styled.div`
     overflow-x: auto;
     margin-top: 15px;
     padding: 40px;
-    height: 500px;
-    overflow-y: auto;
+    height: 400px;
+    overflow-y: scroll;
 `;
 
 const NodeWrapper = styled.div`

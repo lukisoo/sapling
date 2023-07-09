@@ -14,21 +14,23 @@ const NodePopup = (props) => {
       style={{
         backgroundColor: "purple",
         position: "relative", 
-        right: "70px",
+        right: "78px",
         display: "inline-block",
         paddingBottom: "10px",
         height: "150px",
-        width: "200%",
+        width: "250%",
         fontSize: "0.1em",
       }}
     >
       <img src="node_popup.svg" style={{ width: "100%" }} />
       <p
         style={{
-            marginTop: "40px",
+            marginTop: "30px",
+            width: "80%",
+            backgroundColor: "blue",
           position: "absolute",
           top: "30%",
-          left: "45%",
+          left: "50%",
           transform: "translate(-50%, -50%)",
           color: "white",
           fontSize: "14px",
@@ -45,7 +47,7 @@ const NodePopup = (props) => {
       <button
         style={{
           position: "absolute",
-          bottom: "15px",
+          bottom: "25px",
           left: "50%",
           transform: "translateX(-50%)",
           border: "none",
