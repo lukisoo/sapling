@@ -21,13 +21,16 @@ const HomeFooter = () => {
             padding: '0 20px',
           }}
         >   
-        <div style={{ position: 'absolute', marginRight: '10%' }}>
-            <a href={"/garden"}>
-                <button onClick={handleClick} style={{ border: 'none', backgroundColor: 'transparent', cursor: 'pointer' }}>
-                    <img src="footer_visit.svg" alt="Button" style={{ width: '100%', height: '100%' }} />
-                </button>
-            </a>
-        </div>
+            <div>
+                <img src="footer_garden.svg" style={{ left:'-15%', position:'fixed', bottom:'-25%', height:'60%' }} />
+            </div>
+            <div style={{ position: 'absolute', marginRight: '10%' }}>
+                <a href={"/garden"}>
+                    <button onClick={handleClick} style={{ border: 'none', backgroundColor: 'transparent', cursor: 'pointer' }}>
+                        <img src="footer_visit.svg" alt="Button" style={{ width: '100%', height: '100%' }} />
+                    </button>
+                </a>
+            </div>
             <img src="footer_flowers.svg" alt="Footer Flowers" style={{ height: '120%', marginRight: '2%', marginTop: '-1%' }} />
         </div>
     );
