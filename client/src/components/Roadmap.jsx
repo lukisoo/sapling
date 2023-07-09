@@ -6,8 +6,10 @@ const RoadmapContainer = styled.div`
     display: flex;
     gap: 60px;
     overflow-x: auto;
+    margin-top: 40px;
     padding: 40px;
-    height: 400px;
+    height: 500px;
+    overflow-y: hidden;
 `;
 
 const NodeWrapper = styled.div`

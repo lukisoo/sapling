@@ -23,6 +23,8 @@ import CurvingTree from "../assets/plants/curving-tree.png";
 import Dog from "../assets/plants/dog.png";
 import Fish from "../assets/plants/fish.png";
 import Grass from "../assets/plants/grass.png";
+import Shark from "../assets/plants/shark.png";
+
 
 import BirdTreeListing from "../assets/shop-listings/bird-tree.png";
 import FloweringTreeListing from "../assets/shop-listings/flowering-tree.png";
@@ -40,6 +42,8 @@ import CurvingTreeListing from "../assets/shop-listings/curving-tree.png";
 import DogListing from "../assets/shop-listings/dog.png";
 import FishListing from "../assets/shop-listings/fish.png";
 import GrassListing from "../assets/shop-listings/grass.png";
+import SharkListing from "../assets/shop-listings/shark.png";
+
 
 
 import {
@@ -291,6 +295,13 @@ export default function GardenPage() {
                   }}
                   className="listing"
                   src={FishListing}
+                />
+                <img
+                  onClick={() => {
+                    handlePurchase(Shark, 1000);
+                  }}
+                  className="listing"
+                  src={SharkListing}
                 />
               </div>
             ) : (
