@@ -18,41 +18,19 @@ const CompleteTaskPopup = (props) => {
   };
 
   return (
-    <div>
-        <div
-          style={{
-            position: 'fixed',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            width: '40%',
-            height: '40%',
-            borderRadius: '40px',
-            boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
-            background: '#2A6025',
-            zIndex: 999,
-            padding: 30,
-            color: 'white',
-            fontSize: '1.3em'
-          }}
-        >
-            
-          <h2>{task}</h2>
-          <p>+{coins} coins</p>
-          <input type="checkbox" />
-          <input type="checkbox" checked="checked"/>
-            <button onClick={toggleConfirm} style={{ border: 'none', backgroundColor: 'transparent', cursor: 'pointer' }}>
-                <img src="task_popup_confirm.svg" style={{ width: '95%', height: '95%' }} />
-            </button>
-            <button onClick={closePopup} style={{ right: "60px", position: "relative", border: 'none', backgroundColor: 'transparent', cursor: 'pointer' }}>
-                <img src="task_popup_close.svg" style={{ width: '80%', height: '80%' }} />
-            </button>
-            <p>
-                You
-                Matthew
-            </p>
-        </div>
-    </div>
+      <div className="popup-container">
+          <div className="popup-content">
+              <h2>{task}</h2>
+              <p>+{coins} coins</p>
+              <h3>Did you complete task?</h3>
+              <button onClick={toggleConfirm} className="confirm-button">
+                  <img src="task_popup_confirm.svg" alt="confirm" className="button-img" />
+              </button>
+              <button onClick={closePopup} className="close-button">
+                  <img src="task_popup_close.svg" alt="close" className="button-img" />
+              </button>
+          </div>
+      </div>
   );
 };
 

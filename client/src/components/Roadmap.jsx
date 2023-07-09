@@ -6,7 +6,6 @@ const RoadmapContainer = styled.div`
     display: flex;
     gap: 60px;
     overflow-x: auto;
-    margin-top: 15px;
     padding: 40px;
     height: 400px;
     overflow-y: scroll;
