@@ -21,7 +21,16 @@ const HomeFooter = () => {
           }}
         >   
             <div>
-                <img src="footer_garden.svg" style={{ left:'-10%', position:'fixed', bottom:'-26%', height:'50%' }} />
+                <img src="flower2.svg" style={{ left:'52%', position:'fixed', bottom:'0%', height:'15%' }} />
+                <img src="flower2.svg" style={{ left:'30%', position:'fixed', bottom:'10%', height:'15%' }} />
+            </div>
+            <div>
+                <img src="grass.svg" style={{ left:'40%', position:'fixed', bottom:'-2%', height:'10%' }} />
+                <img src="grass.svg" style={{ left:'45%', position:'fixed', bottom:'-2%', height:'10%' }} />
+                <img src="grass.svg" style={{ right:'2%', position:'fixed', bottom:'-2%', height:'10%' }} />
+            </div>
+            <div>
+                <img src="footer_garden.svg" style={{ left:'-15%', position:'fixed', bottom:'-22%', height:'50%' }} />
             </div>
             <div style={{ position: 'absolute', marginRight: '4%' }}>
 
