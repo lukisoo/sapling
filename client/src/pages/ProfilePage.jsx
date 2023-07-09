@@ -39,22 +39,22 @@ export default function ProfilePage() {
     
     const tempLeaderboard = [
       {
-        rank:'1', icon: person, username:'mouyag2001', name:'Matthew Ouyang', xp:'900', userid:'1'
+        rank:'1', icon: person, username:'mouyag2001', name:'Matthew Ouyang', xp:'900', userid:'1', backgroundColor: '#F0FFF0'
       },
       {
-        rank:'2', icon: person, username:'ylei532', name:'Youxiang Lei', xp:'700', userid:'2'
+        rank:'2', icon: person, username:'ylei532', name:'Youxiang Lei', xp:'700', userid:'2', backgroundColor: '#F0FFF0'
       },
       {
-        rank:'3', icon: person, username:'whoreytorrey', name:'Daniel Torrey', xp:'500', userid:'3'
+        rank:'3', icon: person, username:'whoreytorrey', name:'Daniel Torrey', xp:'500', userid:'3', backgroundColor: '#A2D39D'
       },
       {
-        rank:'4', icon: person, username:'nroh555', name:'Naren Rohan', xp:'500', userid:'4'
+        rank:'4', icon: person, username:'nroh555', name:'Naren Rohan', xp:'500', userid:'4', backgroundColor: '#F0FFF0'
       },
       {
-        rank:'5', icon: person, username:'lukisoo', name:'Lucy Zhu', xp:'400', userid:'5'
+        rank:'5', icon: person, username:'lukisoo', name:'Lucy Zhu', xp:'400', userid:'5', backgroundColor: '#F0FFF0'
       },
       {
-        rank:'6', icon: person, username:'zoemlt', name:'Zoe Niu', xp:'300', userid:'6'
+        rank:'6', icon: person, username:'zoemlt', name:'Zoe Niu', xp:'300', userid:'6', backgroundColor: '#F0FFF0'
       }
     ]
 
@@ -63,7 +63,7 @@ export default function ProfilePage() {
     });
 
     const renderedLeaderboard = tempLeaderboard.map((record, index) => {
-      return <LeaderboardBox key={index} rank={record.rank} icon={record.icon} username={record.username} name={record.name} xp={record.xp} userid={record.userid}/>
+      return <LeaderboardBox key={index} rank={record.rank} icon={record.icon} username={record.username} name={record.name} xp={record.xp} userid={record.userid} backgroundColor={record.backgroundColor}/>
     })
 
     console.log(renderedLeaderboard)
@@ -75,7 +75,7 @@ export default function ProfilePage() {
 
         {/* <div id='user-details'>
             <h1>Daniel Torrey</h1>
-            <h2>Whoreytorrey</h2>
+            <h2>whoreytorrey</h2>
             <h2>Joined April 2023</h2>
         </div> */}
 

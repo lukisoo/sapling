@@ -107,7 +107,7 @@ body {
 }
 
 #leaderboard {
-  border: 2px solid red; /* Example border styling */
+  border: 0px solid red; /* Example border styling */
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -159,13 +159,35 @@ body {
   color: #2A6025;
 }
 
+#friends-page {
+  border: 0px solid blue; 
+  width: 80vw;
+  height: 80vh; 
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+
 #friends {
   border: 0px solid red; /* Example border styling */
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   width: 550px;
+  transform: scale(0.7);
+  position: relative;
+  bottom: 70px;
+  right: 86px
+}
+
+#garden-preview {
+  border: 0px solid red; 
+  width: 720px;
+  transform: scale(0.6);
+  position: relative;
+  right: 80px;
+  bottom: 90px;
 }
 
 #rank-badge-box {

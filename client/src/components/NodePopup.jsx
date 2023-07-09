@@ -1,11 +1,11 @@
 import React from 'react';
 
 const NodePopup = (props) => {
-    const {task, coins} = props;
+    const {task, coins, open} = props;
 
-    const complete = (event) => {
-        event.preventDefault();
-        console.log("open modal");
+    const complete = () => {
+      console.log("Modal Popup")
+        open(task, coins);
     }
 
     return (
@@ -33,24 +33,22 @@ const NodePopup = (props) => {
                     +{coins} coins
                 </div>
             </p>
-            <a href="/task">
-                <button
-                    style={{
-                        position: 'absolute',
-                        bottom: '10px',
-                        left: '50%',
-                        transform: 'translateX(-50%)',
-                        border: 'none',
-                        backgroundColor: 'transparent',
-                        cursor: 'pointer',
-                        width: '80%',
-                        paddingBottom: '10px'
-                    }}
-                    onClick={complete}
-                >
-                    <img src="node_popup_button.svg" style={{width: '100%', height: '100%'}}/>
-                </button>
-            </a>
+            <button
+                style={{
+                    position: 'absolute',
+                    bottom: '10px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    border: 'none',
+                    backgroundColor: 'transparent',
+                    cursor: 'pointer',
+                    width: '80%',
+                    paddingBottom: '10px'
+                }}
+                onClick={complete}
+            >
+                <img src="node_popup_button.svg" style={{width: '100%', height: '100%'}}/>
+            </button>
         </div>
     );
 };
