@@ -1,7 +1,9 @@
 import express from "express";
 import axios from 'axios'
 import cors from 'cors'
+import dotenv from 'dotenv'
 const port = 3000
+dotenv.config()
 
 const app = express()
 app.use(express.urlencoded({extended: false}))
@@ -14,7 +16,7 @@ app.get('/', (req,res) => {
 
 app.post('/slack-submit', (req, res) => {
 	axios
-		.post('https://hooks.slack.com/services/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', {
+		.post(process.env.SLACK_WEBHOOK_URL, {
 			blocks: [
 				{
 					type: 'section',
