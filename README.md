@@ -25,8 +25,20 @@ For university students, Sapling transforms into a fun, engaging social applicat
 
 Moreover, Sapling is not confined to organizational walls or campuses - it serves public groups too. Whether you're part of a community, a club, or just a local group of like-minded individuals, Sapling can help to arrange outdoor gatherings and make connections effortless.
 
-Explore Sapling today and see how our app can reinvigorate your daily routine professionally and personally. Your next break could lead to your next big connection. Start planting your Saplings now!
+Explore Sapling today and see how our app can reinvigorate your daily routine professionally and personally. Your next break could lead to your next significant connection. Start planting your Saplings now!
 
-## Background
+# Technologies
+
+- ReactJS, NodeJS, ExpressJS, MongoDB, SlackAPI, ChatGPT4
+
+# Team
+- Lucy Zhu - Frontend & Design 
+- Daniel Torrey - Product Manager
+- Naren Rohan - Backend
+- Youxiang Lei - Design
+- Zoe Niu - Design
+- Matthew Ouyang - Tech Lead
+
+![357825000_965113308265910_4217121732363647719_n](https://github.com/lukisoo/sprout/assets/43261675/54d67d70-6702-4df4-b54c-cc01c163f5b0)
 
 
