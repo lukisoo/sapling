@@ -43,13 +43,15 @@ Explore Sapling today and see how our app can reinvigorate your daily routine pr
 # How To Start
 This repository is split into client and server. We utilise npm workspaces.
 
-Client
+## Client
 Client used to run applications. Run locally using npm install and npm run dev
 
-Server
-Service hosting is a simple endpoint that connects the application to Slack API via incoming webhooks. Run locally using npm install and then node index. 
-Configure the incoming webhooks via your custom Slack application to connect it to your workspace. Follow the guide to get started. https://api.slack.com/
-Replace it with SLACK_WEBHOOK_URL as an environmental variable in the .env file.
+## Server
+Service hosting a simple endpoint that connects the application to Slack API via incoming webhooks. 
+1. Configure the incoming webhooks via your custom Slack application to connect it to your personal workspace. 
+   Follow the guide to get started. https://api.slack.com/
+2. Replace it with SLACK_WEBHOOK_URL as an environmental variable in the .env file.
+3. Run npm install in the server directory and node index in the src directory.
 
 # Team
 
