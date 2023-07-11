@@ -40,6 +40,14 @@ Explore Sapling today and see how our app can reinvigorate your daily routine pr
 
 ![Tech Stack drawio](https://github.com/lukisoo/sprout/assets/43261675/a78abc18-d90f-4a18-a18c-8114c9b700cd)
 
+This repository is split into client and server. We utilise npm workspaces
+
+Client
+Client used to run applications. Run locally using npm install and npm run dev
+
+Server
+Service hosting a simple endpoint that connects the application to Slack API via incoming webhooks. Run locally using npm install and then node index
+
 # Team
 
 - Lucy Zhu - Frontend & Design 
