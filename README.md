@@ -1,6 +1,6 @@
 # Welcome to Sapling!
 
-DEVSxGDSC Hackathon 2023 Team WDCC 2nd place winner!
+This was a 48-hour hackathon project which placed 2nd at the DEVS x GDSC Hackathon 2023.
 
 Sapling is a groundbreaking coworker matching application designed to enrich workplace environments and foster healthier, happier employees. Our platform cultivates a more connected, engaged, and productive workforce by encouraging workers to step outside for a break and bond over shared interests. But Sapling's reach extends beyond just professional contexts - it is a platform for everyone.
 
